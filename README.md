@@ -1,6 +1,6 @@
 # SalaoDeBeleza
 
-Equipe:
+**Equipe:**
 
 * Alex Rafael da Costa **101334**
 * Alexandre Katao **179870**
