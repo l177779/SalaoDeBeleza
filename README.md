@@ -1,7 +1,8 @@
 # SalaoDeBeleza
 
 Equipe:
-Alex Rafael da Costa              RA: 101334
+
+* Alex Rafael da Costa              RA: 101334
 
 Alexandre Katao                       179870 
 
