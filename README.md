@@ -1,6 +1,6 @@
 # SalaoDeBeleza
 
-Equipe: Alex Rafael da Costa              RA: 101334
+Equipe: Alex Rafael da Costa              RA: 101334\n
         Alexandre Katao                       179870 
         Guilherme Garcia dos Santos           173742 
         Laís Arcaro Bueno de Campos           177779
