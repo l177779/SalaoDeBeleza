@@ -23,6 +23,4 @@ public class Agenda {
 	public void setOcupado(Boolean ocupado) {
 		this.ocupado = ocupado;
 	}
-	
-	
 }
