@@ -23,7 +23,4 @@ public class Prestador extends Pessoa {
 	public void setAgenda(List<Agenda> agenda) {
 		this.agenda = agenda;
 	}
-	
-	
-	
 }
