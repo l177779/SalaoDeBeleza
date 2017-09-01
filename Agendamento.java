@@ -51,5 +51,4 @@ public class Agendamento {
 	public void setConfirmado(Boolean confirmado) {
 		this.confirmado = confirmado;
 	}
-
 }
