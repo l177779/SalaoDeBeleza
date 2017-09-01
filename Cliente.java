@@ -1,4 +1,3 @@
-
 public class Cliente extends Pessoa {
 	private String tipoCliente;
 
@@ -9,5 +8,4 @@ public class Cliente extends Pessoa {
 	public void setTipoCliente(String tipoCliente) {
 		this.tipoCliente = tipoCliente;
 	}
-
 }
