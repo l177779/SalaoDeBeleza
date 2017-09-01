@@ -38,7 +38,4 @@ public class Servico {
 	public void setPrestadores(List<Prestador> prestadores) {
 		this.prestadores = prestadores;
 	}
-
-
-
 }
