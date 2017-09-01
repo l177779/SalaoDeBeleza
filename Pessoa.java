@@ -1,7 +1,6 @@
 import java.util.Date;
 
 public class Pessoa {
-	
 	private String cpf;
 	private String nome;
 	private String email;
@@ -10,7 +9,6 @@ public class Pessoa {
 	private char sexo;
 	private Date dataNascimento;
 	
-
 	public String getCpf() {
 		return cpf;
 	}
@@ -53,6 +51,4 @@ public class Pessoa {
 	public void setDataNascimento(Date dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
-
-	
 }
