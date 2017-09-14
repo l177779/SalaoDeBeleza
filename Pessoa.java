@@ -9,6 +9,16 @@ public class Pessoa {
 	private char sexo;
 	private Date dataNascimento;
 	
+	public Pessoa(Pessoa pessoa) {
+		this.setCpf(pessoa.cpf);
+		this.setNome(nome);
+		this.setEmail(pessoa.email);
+		this.setEndereco(pessoa.endereco);
+		this.setTelefone(pessoa.telefone);
+		this.setSexo(pessoa.sexo);
+		this.setDataNascimento(pessoa.dataNascimento);
+	}
+	
 	public String getCpf() {
 		return cpf;
 	}
