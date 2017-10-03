@@ -2,7 +2,6 @@
 
 **Equipe:**
 
-* Alex Rafael da Costa **101334**
 * Alexandre Katao **179870**
 * Guilherme Garcia dos Santos **173742**
 * Laís Arcaro Bueno de Campos **177779**
