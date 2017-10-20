@@ -1,41 +1,44 @@
 package libs;
 
+import java.util.Date;
+
+/**
+ * 
+ * @author guilherme
+ */
 public class Cliente extends Pessoa {
+
     private String tipoCliente;
 
-    public Cliente(Cliente cliente) {
-        super(cliente);
-        this.setTipoCliente(cliente.tipoCliente);
+    /**
+     * 
+     * @param codigo
+     * @param nome
+     * @param email
+     * @param telefone
+     * @param sexo
+     * @param dataNascimento
+     * @param status
+     * @param tipoCliente 
+     */
+    public Cliente(String codigo, String nome, String email, String telefone, char sexo, Date dataNascimento, String tipoCliente) {
+        super(codigo, nome, email, telefone, sexo, dataNascimento);
+        this.setTipoCliente(tipoCliente);
     }
 
+    /**
+     * 
+     * @return String
+     */
     public String getTipoCliente() {
-        return tipoCliente;
+        return this.tipoCliente;
     }
 
-    public void setTipoCliente(String tipoCliente) {
+    /**
+     * 
+     * @param tipoCliente 
+     */
+    public final void setTipoCliente(String tipoCliente) {
         this.tipoCliente = tipoCliente;
-    }
-
-    public boolean cadastrar(Cliente cliente){
-        if (cliente != null){
-                //insert DB
-        }
-        return true;
-    }
-
-    public boolean editar(Cliente cliente){
-        if (cliente != null){
-                //update DB
-        }
-        return true;
-    }
-
-    public Cliente consultar(Cliente cliente){
-        //if (nome != null){
-                //select DB
-                //Cliente cliente;
-            Cliente cli = new Cliente(cliente);
-        //}
-        return cli;
-    }
+    } 
 }

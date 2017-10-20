@@ -1,43 +1,50 @@
 package libs;
 
-import java.util.Date;
-import java.util.List;
+/**
+ * 
+ * @author guilherme
+ */
+public class Servico extends ItemVenda {
+    
+    private int duracao;
+    private Produto produto;
 
-public class Servico {
-	private long codServico;
-	private String descricao;
-	private Date dataCriacao;
-	private int duracao;
-	//private List<Prestador> prestadores;
-	
-	public long getCodServico() {
-		return codServico;
-	}
-	public void setCodServico(long codServico) {
-		this.codServico = codServico;
-	}
-	public String getDescricao() {
-		return descricao;
-	}
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
-	}
-	public Date getDataCriacao() {
-		return dataCriacao;
-	}
-	public void setDataCriacao(Date dataCriacao) {
-		this.dataCriacao = dataCriacao;
-	}
-	public int getDuracao() {
-		return duracao;
-	}
-	public void setDuracao(int duracao) {
-		this.duracao = duracao;
-	}
-	/*public List<Prestador> getPrestadores() {
-		return prestadores;
-	}
-	public void setPrestadores(List<Prestador> prestadores) {
-		this.prestadores = prestadores;
-	}*/
+    /**
+     * 
+     * @param codigo
+     * @param descricao
+     * @param preco
+     * @param duracao 
+     * @param produto 
+     */
+    public Servico(String codigo, String descricao, double preco, int duracao, Produto produto) {
+        super(codigo, descricao, preco);
+        this.setDuracao(duracao);
+        this.setProduto(produto);
+    }
+    
+    /**
+     * 
+     * @return
+     */
+    public int getDuracao() {
+        return this.duracao;
+    }
+
+    /**
+     * 
+     * @param duracao 
+     */
+    public final void setDuracao(int duracao) {
+        this.duracao = duracao;
+    }
+
+    public Produto getProduto() {
+        return this.produto;
+    }
+
+    public final void setProduto(Produto produto) {
+        this.produto = produto;
+    }
+    
 }

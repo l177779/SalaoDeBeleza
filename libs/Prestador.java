@@ -1,34 +1,44 @@
 package libs;
 
-import java.util.List;
+import java.util.Date;
 
+/**
+ * 
+ * @author guilherme
+ */
 public class Prestador extends Pessoa {
-    private long codPrestador;
-    private Boolean ativo;
-    private List<Agenda> agenda;
 
-    public Prestador(Pessoa pessoa) {
-        super(pessoa);
-        this.setAtivo(true);
-        this.setCodPrestador(12);
+    private double comissao;
+
+   /**
+    * 
+    * @param codigo
+    * @param nome
+    * @param email
+    * @param telefone
+    * @param sexo
+    * @param dataNascimento
+    * @param comissao
+    */
+    public Prestador(String codigo, String nome, String email, String telefone, char sexo, Date dataNascimento, double comissao) {
+        super(codigo, nome, email, telefone, sexo, dataNascimento);        
+        this.setComissao(comissao);
+    }
+    
+    /**
+     * 
+     * @return double
+     */
+    public double getComissao() {
+        return comissao;
     }
 
-    public long getCodPrestador() {
-        return codPrestador;
+    /**
+     * 
+     * @param comissao 
+     */
+    public final void setComissao(double comissao) {
+        this.comissao = comissao;
     }
-    public void setCodPrestador(long codPrestador) {
-            this.codPrestador = codPrestador;
-    }
-    public Boolean getAtivo() {
-            return ativo;
-    }
-    public void setAtivo(Boolean ativo) {
-            this.ativo = ativo;
-    }
-    public List<Agenda> getAgenda() {
-            return agenda;
-    }
-    public void setAgenda(List<Agenda> agenda) {
-            this.agenda = agenda;
-    }
+         
 }
