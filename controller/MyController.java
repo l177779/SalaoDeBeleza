@@ -7,8 +7,8 @@ package controller;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import libs.Cliente;
-import libs.Pessoa;
+import application.Cliente;
+import application.Pessoa;
 
 /**
  *

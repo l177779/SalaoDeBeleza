@@ -1,4 +1,4 @@
-package libs;
+package application;
 
 import java.util.Date;
 
@@ -18,7 +18,6 @@ public class Cliente extends Pessoa {
      * @param telefone
      * @param sexo
      * @param dataNascimento
-     * @param status
      * @param tipoCliente 
      */
     public Cliente(String codigo, String nome, String email, String telefone, char sexo, Date dataNascimento, String tipoCliente) {
