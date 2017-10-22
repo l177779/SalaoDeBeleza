@@ -5,10 +5,8 @@
  */
 package controller;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import application.Cliente;
-import application.Pessoa;
+import java.util.logging.*;
+
 
 /**
  *
@@ -18,24 +16,17 @@ public class MyController {
     
     /**
      * 
-     * @param args
-     * @throws ParseException 
+     * @param args 
      */
-    public static void main(String args[]) throws ParseException{
+    public static void main(String args[]){
        
-        Cliente p;
-        p = new Cliente("1", "Guilherme", "gg.dossantos@hotmail.com", "19982534663", 'M', new SimpleDateFormat("dd/mm/yyyy").parse("11/08/1998"), "comum");
-        
-        System.out.println("Dados da pessoa: \n\n");
-        
-        System.out.println("Código: "+p.getCodigo());
-        System.out.println("Nome: "+p.getNome());
-        System.out.println("E-mail: "+p.getEmail());
-        System.out.println("Telefone: "+p.getTelefone());
-        System.out.println(p.getSexo() == 'M' ? "Sexo: Masculino" : "Sexo: Feminino");
-        System.out.println("Data de nascimento: "+p.getDataNascimento());
-        System.out.println(p.isAtivo() ? "Cliente está: Ativo" : "Cliente está: Inativo");
-        System.out.println("Tipo de cliente: "+p.getTipoCliente());
+        try{
+            Salao vicellis;
+            vicellis = new Salao();
+            vicellis.start("Vicellis");
+        }catch(Exception e){
+            
+        }
         
     }
 }

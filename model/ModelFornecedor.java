@@ -9,6 +9,6 @@ package model;
  *
  * @author guilherme
  */
-public class ModelFornecedor extends ModelPessoa {
+public class ModelFornecedor {
 
 }

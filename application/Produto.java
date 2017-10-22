@@ -5,8 +5,6 @@
  */
 package application;
 
-import java.util.logging.Logger;
-
 /**
  *
  * @author guilherme
