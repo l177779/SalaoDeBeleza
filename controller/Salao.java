@@ -45,7 +45,7 @@ public class Salao {
             System.out.println("Houve um erro, tente novamente, se o erro persistir, entre em contato!");
         }
         
-        
+        despedida();
     }
     
     /**
@@ -55,6 +55,10 @@ public class Salao {
         System.out.println("********************* Bem vindo ao salão de beleza "+getNome()+"! *********************");
     }
 
+    private void despedida(){
+        System.out.println("********************* O salão "+getNome()+" agradece, volte sempre! *********************");
+    }
+    
     /**
      * 
      * @return 
