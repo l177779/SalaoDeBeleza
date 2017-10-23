@@ -7,12 +7,43 @@
 * Laís Arcaro Bueno de Campos **177779**
 
 # Objetivo
-Com diversos serviços na área estética, vários clientes e alguns funcionários, o salão de beleza tem como objetivo a satisfação de seus clientes com o serviço e o atendimento prestados. Porém, com o crescimento do estabelecimento, os proprietários estão enfrentando um problema para controlar seu caixa, os agendamentos, que atualmente só podem ser feitos via telefone, além de outras grandes dificuldades como controlar o estoque de produtos, gerar relatórios de comissões e faturamento mensal e gerar nota fiscal automaticamente após realizar uma venda.
+Com diversos serviços na área estética, vários clientes e alguns funcionários, o salão de beleza tem como objetivo a satisfação de seus clientes com o serviço e o atendimento prestados. Porém, com o crescimento do estabelecimento, os proprietários estão enfrentando um problema com os agendamentos e as vendas, além de outras grandes dificuldades como controlar o estoque de produtos.
 
 # Classes
-- Pessoa
-- Prestador
-- Cliente
+application/
 - Agenda
 - Agendamento
+- Cliente
+- Compra
+- Fornecedor
+- ItemCompra
+- ItemNota
+- ItemVenda
+- NotaFiscal
+- Pessoa
+- PrestacaoServico
+- Prestador
+- Produto
 - Servico
+
+controller/
+- MyController
+- Salao
+
+model/
+- ModelAgenda
+- ModelAgendamento
+- ModelCliente
+- ModelCompra
+- ModelFornecedor
+- ModelItemCompra
+- ModelItemNota
+- ModelItemVenda
+- ModelNotaFiscal
+- ModelPrestacaoServico
+- ModelPrestador
+- ModelProduto
+- ModelServico
+
+view/
+Menu
