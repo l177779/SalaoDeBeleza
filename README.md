@@ -1,4 +1,4 @@
-# SalaoDeBeleza
+# Salao de Beleza
 
 **Equipe:**
 
