@@ -40,7 +40,7 @@ public class Cliente extends Pessoa {
     public final void setCpf(String cpf) {
         this.cpf = cpf;
     } 
-    
+
     @Override
     public String toString() {
         return "Cliente{" + "nome = " + nome + ", telefone = " + telefone + " email = " + email +"}";
