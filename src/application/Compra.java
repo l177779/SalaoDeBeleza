@@ -17,10 +17,10 @@ public class Compra {
     private double valor;
 
     /**
-     * 
-     * @param codigo
-     * @param data
-     * @param valor 
+     * Construtor de compra
+     * @param codigo identificador da compra
+     * @param data data da compra
+     * @param valor valor da compra
      */
     public Compra(String codigo,Date data, double valor) {
         setCodigo(codigo);
@@ -28,51 +28,49 @@ public class Compra {
         setValor(valor);
     }
 
-    
-    
     /**
-     * 
-     * @return 
+     * Get codigo
+     * @return String codigo
      */
     public String getCodigo() {
         return codigo;
     }
     
     /**
-     * 
-     * @param codigo 
+     * Set codigo
+     * @param codigo identificador da compra
      */
     public final void setCodigo(String codigo) {
         this.codigo = codigo;
     }
 
     /**
-     * 
-     * @return 
+     * Get data
+     * @return Date dataCompra
      */
     public Date getData() {
         return data;
     }
 
     /**
-     * 
-     * @param data 
+     * Set data
+     * @param data data da compra
      */
     public final void setData(Date data) {
         this.data = data;
     }
 
     /**
-     * 
-     * @return 
+     * Get valor
+     * @return double valorCompra
      */
     public double getValor() {
         return valor;
     }
 
     /**
-     * 
-     * @param valor 
+     * Set valor
+     * @param valor valor da compra
      */
     public final void setValor(double valor) {
         this.valor = valor;

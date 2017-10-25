@@ -16,7 +16,7 @@ public class Fornecedor extends Pessoa {
     private String cnpj;
     
     /**
-     * 
+     * Construtor do fornecedor
      * @param codigo
      * @param nome
      * @param email
@@ -30,16 +30,16 @@ public class Fornecedor extends Pessoa {
     }        
 
     /**
-     * 
-     * @return String
+     * Get cnpj
+     * @return String cnpj
      */
     public String getCnpj() {
         return this.cnpj;
     }
 
     /**
-     * 
-     * @param cnpj 
+     * Set cnpj
+     * @param cnpj cnpj do fornecedor
      */
     public final void setCnpj(String cnpj) {
         this.cnpj = cnpj;

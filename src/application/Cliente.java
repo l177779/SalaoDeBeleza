@@ -8,36 +8,36 @@ import java.util.Date;
  */
 public class Cliente extends Pessoa {
 
-    private String tipoCliente;
+    private String cpf;
 
     /**
-     * 
-     * @param codigo
-     * @param nome
-     * @param email
-     * @param telefone
-     * @param sexo
-     * @param dataNascimento
-     * @param tipoCliente 
+     * Construtor do cliente
+     * @param codigo identificador da pessoa
+     * @param nome nome do cliente
+     * @param email email do cliente
+     * @param telefone telefone do cliente
+     * @param sexo sexo do cliente
+     * @param dataNascimento data de nascimento do cliente
+     * @param cpf cpf do cliente
      */
-    public Cliente(String codigo, String nome, String email, String telefone, char sexo, Date dataNascimento, String tipoCliente) {
+    public Cliente(String codigo, String nome, String email, String telefone, char sexo, Date dataNascimento, String cpf) {
         super(codigo, nome, email, telefone, sexo, dataNascimento);
-        this.setTipoCliente(tipoCliente);
+        this.setCpf(cpf);
     }
 
     /**
-     * 
-     * @return String
+     * Get cpf
+     * @return String cpf
      */
-    public String getTipoCliente() {
-        return this.tipoCliente;
+    public String getCpf() {
+        return this.cpf;
     }
 
     /**
-     * 
-     * @param tipoCliente 
+     * Set cpf
+     * @param cpf cpf do cliente
      */
-    public final void setTipoCliente(String tipoCliente) {
-        this.tipoCliente = tipoCliente;
+    public final void setCpf(String cpf) {
+        this.cpf = cpf;
     } 
 }
