@@ -8,6 +8,8 @@ package controller;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
+import model.ArquivoPessoa;
+import model.CadastroPessoa;
 import view.Menu;
 
 /**
@@ -101,6 +103,14 @@ public class Programa {
         
         switch(escolha){
             case 1: 
+                ArquivoPessoa arq = new ArquivoPessoa();
+                CadastroPessoa obj = arq.load();
+                String pessoa[] = new String[7];
+                System.out.println("Teste de Arquivo");
+                pessoa = obj.getPessoa();
+                
+                System.out.println(Arrays.toString(pessoa));
+                arq.save(obj);
             break;
             case 2: 
             break;
