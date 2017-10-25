@@ -14,7 +14,7 @@ import java.util.Date;
 public class Fornecedor extends Pessoa {
 
     private String cnpj;
-    
+
     /**
      * Construtor do fornecedor
      * @param codigo
@@ -27,7 +27,7 @@ public class Fornecedor extends Pessoa {
     public Fornecedor(String codigo, String nome, String email, String telefone, char sexo, Date dataNascimento, String cnpj) {
         super(codigo,nome,email,telefone,sexo,dataNascimento);
         this.setCnpj(cnpj);
-    }        
+    }
 
     /**
      * Get cnpj
@@ -43,6 +43,5 @@ public class Fornecedor extends Pessoa {
      */
     public final void setCnpj(String cnpj) {
         this.cnpj = cnpj;
-    }   
-    
+    }
 }

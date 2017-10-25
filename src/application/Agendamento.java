@@ -49,7 +49,7 @@ public class Agendamento {
     public final void setCodigo(String codigo) {
         this.codigo = codigo;
     }
-    
+
     /**
      * Get codigo do cliente que está realizando o agendamento
      * @return String codigoCliente
@@ -57,7 +57,7 @@ public class Agendamento {
     public String getCodigoCliente() {
         return this.codigoCliente;
     }
-    
+
     /**
      * Set codigo do cliente que está realizando o agendamento
      * @param cliente identificador do cliente
@@ -65,7 +65,7 @@ public class Agendamento {
     public final void setCodigoCliente(String cliente) {
         this.codigoCliente = cliente;
     }
-    
+
     /**
      * Get codigo da agenda em que será inserido o agendamento
      * @return String codigoAgenda
@@ -73,7 +73,7 @@ public class Agendamento {
     public String getCodigoAgenda() {
         return this.codigoAgenda;
     }
-    
+
     /**
      * Set codigo da agenda em que será inserido o agendamento
      * @param codigoAgenda identificador da agenda
@@ -81,7 +81,7 @@ public class Agendamento {
     public final void setCodigoAgenda(String codigoAgenda) {
         this.codigoAgenda = codigoAgenda;
     }
-    
+
     /**
      * Get data do agendamento
      * @return Date dataAgendamento

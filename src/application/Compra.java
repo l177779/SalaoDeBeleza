@@ -12,6 +12,7 @@ import java.util.Date;
  * @author guilherme
  */
 public class Compra {
+
     private String codigo;
     private Date data;
     private double valor;
@@ -35,7 +36,7 @@ public class Compra {
     public String getCodigo() {
         return codigo;
     }
-    
+
     /**
      * Set codigo
      * @param codigo identificador da compra

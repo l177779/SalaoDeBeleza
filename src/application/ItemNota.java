@@ -10,14 +10,14 @@ package application;
  * @author guilherme
  */
 public class ItemNota {
-    
+
     private int qtde;
     private double preco;
     private String codigoItemVenda;
     private String codigoNotaFiscal;
 
     /**
-     * 
+     * Construtor do ItemNota
      * @param qtde
      * @param preco
      * @param codigoItemVenda

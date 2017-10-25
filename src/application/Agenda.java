@@ -12,7 +12,7 @@ import java.util.List;
  * @author guilherme
  */
 public class Agenda {
-    
+
     private String codigo;    
     private String codigoPrestador;
     private List<Agendamento> agendamentos;   
@@ -28,7 +28,7 @@ public class Agenda {
         setCodigoPrestador(codigoPrestador);
         setAgendamentos(agendamentos);
     }
-    
+
     /**
      * Get codigo
      * @return String codigo
