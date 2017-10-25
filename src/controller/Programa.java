@@ -5,9 +5,14 @@
  */
 package controller;
 
+import application.Cliente;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.List;
+import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import view.Menu;
 
 /**
@@ -15,8 +20,7 @@ import view.Menu;
  * @author guilherme
  */
 public class Programa {
-    
-    
+        
     /**
      * 
      * @param nome 
@@ -35,10 +39,8 @@ public class Programa {
      * chama proxima "tela" de acordo com a opção selecionada
      */
     private void telaInicial() {
-    
-        int escolha = -1;
-        
-        escolha = selecionarOpcoes("Menu Principal", Arrays.asList("Cadastros", "Venda", "Compra", "Consultas","Sair"));
+                    
+        int escolha = selecionarOpcoes("Menu Principal", Arrays.asList("Cadastros", "Venda", "Compra", "Consultas","Sair"));
         
         switch(escolha){
             case 1: 
@@ -54,6 +56,7 @@ public class Programa {
                 telaConsultas();
                 break;
             case 0:
+                //sai apenas
                 break;
         }
     }
@@ -61,43 +64,90 @@ public class Programa {
     /**
      * 
      */
-    private void telaCadastros(){
-        int escolha = -1;
+    private void telaCadastros(){        
         
-        escolha = selecionarOpcoes("Cadastros", Arrays.asList("Cadastrar Cliente", "Cadastrar Produto", "Cadastrar Serviço", "Cadastrar Fornecedor"));
+        int escolha = selecionarOpcoes("Cadastros", Arrays.asList("Cadastrar Cliente"/*, "Cadastrar Produto", "Cadastrar Serviço", "Cadastrar Fornecedor"*/,"Voltar"));
         
         switch(escolha){
-            case 1: 
-            break;
+            case 1:
+                try{
+                    telaCadastroCliente();
+                }catch(ParseException ex){
+                    Logger LOGGER = Logger.getLogger(Programa.class.getName());
+                    LOGGER.log(Level.SEVERE, "Houve um erro ao cadastrar o cliente, a data informada não é válida");                    
+                }
+                break;
             case 2: 
-            break;
+                break;
             case 3: 
-            break;
-            case 4: 
+                break;
+            case 4:
+                break;
+            case 0:
+                telaInicial();
+                break;
         }
+    }
+    
+    /**
+     * 
+     * @throws java.text.ParseException
+     */
+    public void telaCadastroCliente() throws ParseException {
+        
+        Scanner reader = new Scanner(System.in);
+        
+        String nome;
+        String email;
+        String telefone;
+        char sexo;
+        String dataString;
+        String CPF;
+        
+        System.out.println("Digite o nome do cliente:");
+        nome = reader.nextLine();
+        
+        System.out.println("Digite o cpf do cliente: ");
+        CPF = reader.nextLine();
+        
+        System.out.println("Digite o email do cliente:");
+        email = reader.nextLine();
+        
+        System.out.println("Digite o telefone do cliente:");
+        telefone = reader.nextLine();
+        
+        //ta dando erro aqui
+        /*System.out.println("Digite o sexo do cliente:");*/
+        //sexo = reader.next().charAt(0);
+        
+        /*System.out.println("Digite a data de nascimento do cliente:");
+        dataString = reader.nextLine();*/
+        dataString = "11/08/1998";
+        
+        Cliente cli = new Cliente(nome,CPF,email,telefone,'M',new SimpleDateFormat("dd/MM/yyyy").parse(dataString));
+        
+        System.out.println(cli.toString());
     }
     
     /**
      * 
      */
     private void telaVenda(){
-        
+        System.out.println("There isn't nothing here.");
     }
     
     /**
      * 
      */
     private void telaCompra(){
-
+        System.out.println("There isn't nothing here.");
     }
     
     /**
      * 
      */
     private void telaConsultas(){
-        int escolha = -1;
-        
-        escolha = selecionarOpcoes("Consultas", Arrays.asList("Consultar Clientes", "Consultar Produtos", "Consultar Serviços", "Consultar Fornecedores"));
+        int escolha = selecionarOpcoes("Consultas", Arrays.asList("Consultar Clientes", "Consultar Produtos", "Consultar Serviços", "Consultar Fornecedores"));
         
         switch(escolha){
             case 1: 

@@ -24,8 +24,8 @@ public class Fornecedor extends Pessoa {
      * @param sexo
      * @param dataNascimento    
      */
-    public Fornecedor(String codigo, String nome, String email, String telefone, char sexo, Date dataNascimento, String cnpj) {
-        super(codigo,nome,email,telefone,sexo,dataNascimento);
+    public Fornecedor( String nome, String email, String telefone, char sexo, Date dataNascimento, String cnpj) {
+        super(nome,email,telefone,sexo,dataNascimento);
         this.setCnpj(cnpj);
     }        
 
