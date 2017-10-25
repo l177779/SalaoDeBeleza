@@ -37,7 +37,7 @@ public class MyController {
         
         try{
             Programa prog;
-            prog = new Programa();
+            prog = new Programa();                        
 
             LOGGER.log(Level.INFO, "Entrou no sistema às: {0}", new SimpleDateFormat("HH:mm - dd/MM/yyyy").format(new Date(System.currentTimeMillis())));
             
