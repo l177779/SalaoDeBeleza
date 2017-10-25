@@ -41,6 +41,10 @@ public class Cliente extends Pessoa {
         this.cpf = cpf;
     } 
 
+    /**
+     * Sobreescrita do metodo toString para retornar os dados basicos do cliente
+     * @return String dadosBasicosCliente
+     */
     @Override
     public String toString() {
         return "Cliente{" + "nome = " + nome + ", telefone = " + telefone + " email = " + email +"}";

@@ -31,64 +31,64 @@ public class ItemNota {
     }
 
     /**
-     * 
-     * @return 
+     * Get quantidade
+     * @return int quantidade
      */
     public int getQtde() {
         return qtde;
     }
 
     /**
-     * 
-     * @param qtde 
+     * Set quantidade
+     * @param qtde quantidade do ItemNota
      */
     public final void setQtde(int qtde) {
         this.qtde = qtde;
     }
 
     /**
-     * 
-     * @return 
+     * Get preco
+     * @return double preco
      */
     public double getPreco() {
         return preco;
     }
 
     /**
-     * 
-     * @param preco 
+     * Set preco
+     * @param preco preco do ItemNota
      */
     public final void setPreco(double preco) {
         this.preco = preco;
     }
 
     /**
-     * 
-     * @return 
+     * Get codigo do ItemVenda
+     * @return String codigoItemVenda
      */
     public String getCodigoItemVenda() {
         return codigoItemVenda;
     }
 
     /**
-     * 
-     * @param codigoItemVenda 
+     * Set codigo do ItemVenda
+     * @param codigoItemVenda codigo do ItemVenda
      */
     public final void setCodigoItemVenda(String codigoItemVenda) {
         this.codigoItemVenda = codigoItemVenda;
     }
 
     /**
-     * 
-     * @return 
+     * Get codigo da NotaFiscal
+     * @return String codigoNotaFiscal
      */
     public String getCodigoNotaFiscal() {
         return codigoNotaFiscal;
     }
 
     /**
-     * 
-     * @param codigoNotaFiscal 
+     * Set codigo da NotaFiscal
+     * @param codigoNotaFiscal codigo da NotaFiscal
      */
     public final void setCodigoNotaFiscal(String codigoNotaFiscal) {
         this.codigoNotaFiscal = codigoNotaFiscal;
