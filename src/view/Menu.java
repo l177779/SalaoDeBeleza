@@ -37,7 +37,7 @@ public class Menu {
                 
         int i = 0;
         for (String op : opcoes) {
-            if("Sair".equals(op)){
+            if("Sair".equals(op) || "Voltar".equals(op)){
                 System.out.println("0 - "+op);
             }else{
                 System.out.println((++i)+" - "+op);
@@ -55,17 +55,17 @@ public class Menu {
         
         //cria scanner para pegar opção selecionada
         Scanner s;
-        s = new Scanner(System.in);
-        
-        int escolha = -1;
+        s = new Scanner(System.in);                
                 
+        int escolha = -1;
+        
         try{
             escolha = s.nextInt();
         }catch(Exception e){
-            throw new Exception();            
+            throw new Exception();
+        }finally{
+            return escolha;
         }
-        
-        return escolha;
     }
     
     public boolean trataEscolha(int escolha){        

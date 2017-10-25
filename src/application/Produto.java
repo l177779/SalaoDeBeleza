@@ -41,4 +41,9 @@ public class Produto extends ItemVenda {
         this.qtdEstoque = qtdEstoque;
     }
     
+    @Override
+    public String toString() {
+        return "Produto{" + "codigo = " + codigo + ", descrição = " + descricao + ", preco = " + preco +", quantidade em estoque =" + qtdEstoque + "}";
+    }
+    
 }

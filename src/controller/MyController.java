@@ -5,8 +5,12 @@
  */
 package controller;
 
-import java.util.logging.*;
-
+import java.io.IOException;
+import java.util.logging.FileHandler;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  *
@@ -14,20 +18,36 @@ import java.util.logging.*;
  */
 public class MyController {
     
+    private static final Logger LOGGER = Logger.getLogger(Programa.class.getName());
+    
     /**
      * 
      * @param args 
      */
     public static void main(String args[]){
-       
-        //Logger LOG = new Logger();
+                
+        FileHandler fh = null;
+        try {
+            fh = new FileHandler("log-acesso.txt");
+            fh.setLevel(Level.FINE);
+        } catch (IOException | SecurityException ex) {
+            Logger.getLogger(MyController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        LOGGER.addHandler(fh);    
         
         try{
             Programa prog;
             prog = new Programa();
-            prog.start("Vicellis");
-        }catch(Exception e){
+
+            LOGGER.log(Level.INFO, "Entrou no sistema às: {0}", new SimpleDateFormat("HH:mm - dd/MM/yyyy").format(new Date(System.currentTimeMillis())));
             
+            prog.start("Vicellis");
+            
+            LOGGER.log(Level.INFO, "Saiu do sistema às: {0}", new SimpleDateFormat("HH:mm - dd/MM/yyyy").format(new Date(System.currentTimeMillis())));
+            
+        }catch(Exception ex){
+            LOGGER.log(Level.SEVERE, ex.getMessage());
+            System.out.println("Algo deu errado, esse programa será finalizado.");
         }
         
     }
