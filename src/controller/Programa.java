@@ -5,143 +5,41 @@
  */
 package controller;
 
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
-import view.Menu;
+import application.Cliente;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author guilherme
  */
 public class Programa {
-    
-    
+        
     /**
      * 
      * @param nome 
      */
-    public void start(String nome){
+    public void start(String nome) throws ParseException{
         Salao.setNome("Vicellis");
         boasVindas();
         
-        telaInicial();
+        try{
+            Cliente cli = new Cliente("Guilherme","47577220876","gg.dossantos@hotmail.com","19982534663",'M',new SimpleDateFormat("dd/MM/yyyy").parse("11/08/1998"));        
+            Cliente cli2 = new Cliente("José","47577220876","gg.dossantos@hotmail.com","19982534663",'M',new SimpleDateFormat("dd/MM/yyyy").parse("11/08/1998"));
+            
+            System.out.println("Clientes cadastrados: \n");
+            System.out.println(cli.toString());
+            System.out.println(cli2.toString());
+            
+        }catch(ParseException ex){
+            Logger LOGGER = Logger.getLogger(Programa.class.getName());
+            LOGGER.log(Level.SEVERE, "Houve um erro ao cadastrar os clientes.");
+        }
         
         despedida();
     }   
-
-    /**
-     * Método pega escolha do menu e
-     * chama proxima "tela" de acordo com a opção selecionada
-     */
-    private void telaInicial() {
-    
-        int escolha = -1;
-        
-        escolha = selecionarOpcoes("Menu Principal", Arrays.asList("Cadastros", "Venda", "Compra", "Consultas","Sair"));
-        
-        switch(escolha){
-            case 1: 
-                telaCadastros();
-                break;
-            case 2: 
-                telaVenda();
-                break;
-            case 3: 
-                telaCompra();
-                break;
-            case 4: 
-                telaConsultas();
-                break;
-            case 0:
-                break;
-        }
-    }
-    
-    /**
-     * 
-     */
-    private void telaCadastros(){
-        int escolha = -1;
-        
-        escolha = selecionarOpcoes("Cadastros", Arrays.asList("Cadastrar Cliente", "Cadastrar Produto", "Cadastrar Serviço", "Cadastrar Fornecedor"));
-        
-        switch(escolha){
-            case 1: 
-            break;
-            case 2: 
-            break;
-            case 3: 
-            break;
-            case 4: 
-        }
-    }
-    
-    /**
-     * 
-     */
-    private void telaVenda(){
-        
-    }
-    
-    /**
-     * 
-     */
-    private void telaCompra(){
-
-    }
-    
-    /**
-     * 
-     */
-    private void telaConsultas(){
-        int escolha = -1;
-        
-        escolha = selecionarOpcoes("Consultas", Arrays.asList("Consultar Clientes", "Consultar Produtos", "Consultar Serviços", "Consultar Fornecedores"));
-        
-        switch(escolha){
-            case 1: 
-            break;
-            case 2: 
-            break;
-            case 3: 
-            break;
-            case 4: 
-        }
-    }
-    
-    /**
-     * Exibe menu com opções a serem selecionadas
-     * Verifica se a opção é válida e retorna-a
-     * @param opcoes
-     * @return 
-     */
-    private int selecionarOpcoes(String titulo, List<String> opcoes){
-        
-        //cria menu, utilizado provisóriamente enquanto não aprendemos interfaces gráficas
-        Menu menu;
-        menu = new Menu(titulo, opcoes);
-        
-        int op = -1;
-        
-        do{
-            menu.exibir();
-
-            try{
-                op = menu.getEscolha();
-
-                if(!menu.trataEscolha(op)){                    
-                    op = -1;
-                }
-
-            }catch(Exception e){            
-                System.out.println("Houve um erro, tente novamente, se o erro persistir, entre em contato!");
-                op = -1;
-            }
-        }while(op == -1);
-        
-        return op;
-    }
     
     /**
      * Exibe mensagem de boas vindas

@@ -17,15 +17,13 @@ public abstract class Pessoa {
 
     /**
      *
-     * @param codigo
      * @param nome
      * @param email
      * @param telefone
      * @param sexo
      * @param dataNascimento
      */
-    public Pessoa(String codigo, String nome, String email, String telefone, char sexo, Date dataNascimento) {               
-        this.setCodigo(codigo);
+    public Pessoa( String nome, String email, String telefone, char sexo, Date dataNascimento) {               
         this.setNome(nome);
         this.setEmail(email);
         this.setTelefone(telefone);

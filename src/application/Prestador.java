@@ -20,8 +20,8 @@ public class Prestador extends Pessoa {
     * @param dataNascimento
     * @param comissao
     */
-    public Prestador(String codigo, String nome, String email, String telefone, char sexo, Date dataNascimento, double comissao) {
-        super(codigo, nome, email, telefone, sexo, dataNascimento);        
+    public Prestador(String nome, String email, String telefone, char sexo, Date dataNascimento, double comissao) {
+        super(nome, email, telefone, sexo, dataNascimento);        
         this.setComissao(comissao);
     }
     
