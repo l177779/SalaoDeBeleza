@@ -1,0 +1,5 @@
+codigo,nome,email,telefone,sexo,dataNascimento,status,comissao
+1,Romário Faria,romario@gmail.com,3232-3232,m,12/12/1983,true,5
+2,Ronaldo Nazário,fenomeno@gmail.com,0909-0909,m,10/07/1985,true,5
+3,Edson Arantes,pele@gmail.com,1010-1010,m,17/03/1965,true,10
+4,Zinedine Zidane,zidane@gmail.com,0505-0505,m,05/01/1976,true,15

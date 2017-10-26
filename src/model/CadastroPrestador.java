@@ -5,6 +5,7 @@
  */
 package model;
 
+import application.Prestador;
 import java.io.Serializable;
 import java.util.Iterator;
 import java.util.List;
@@ -12,33 +13,34 @@ import java.util.Map;
 import java.util.Random;
 import java.util.Set;
 import java.util.logging.Logger;
-import model.ArquivoPessoa;
+import model.ArquivoPrestador;
 
 /**
  *
  * @author alekatao
  */
-public class CadastroPessoa {
+public class CadastroPrestador {
     
-    private List<String[]> pessoas;
+    private List<Prestador> prestadores;
     
     
      /**
      * Cria objeto com dados obtidos de outras fontes
      * 
-     * @param data List com vetor de String contendo da Pessoa
+     * @param data List com vetor de String contendo do prestador
      */
-    public CadastroPessoa(List<String[]> data) {
-        pessoas = data;
+    public CadastroPrestador(List<Prestador> data) {
+        prestadores = data;
     }
     
     /**
-     * Obtem uma pessoa
+     * Obtem um Prestador
      * 
-     * @return um vetor de string com os dados da pessoa
+     * @return um vetor de string com os dados do prestador
      */
-    public String[] getPessoa() {
-        return pessoas.get(0);
+    public Prestador getPrestador() {
+
+        return prestadores.get(0);
     }
     
     

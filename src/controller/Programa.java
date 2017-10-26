@@ -5,11 +5,12 @@
  */
 package controller;
 
+import application.Prestador;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
-import model.ArquivoPessoa;
-import model.CadastroPessoa;
+import model.ArquivoPrestador;
+import model.CadastroPrestador;
 import view.Menu;
 
 /**
@@ -103,13 +104,11 @@ public class Programa {
         
         switch(escolha){
             case 1: 
-                ArquivoPessoa arq = new ArquivoPessoa();
-                CadastroPessoa obj = arq.load();
-                String pessoa[] = new String[7];
-                System.out.println("Teste de Arquivo");
-                pessoa = obj.getPessoa();
+                ArquivoPrestador arq = new ArquivoPrestador();
+                CadastroPrestador obj = arq.load();
+                Prestador prestador = obj.getPrestador();
                 
-                System.out.println(Arrays.toString(pessoa));
+                System.out.println("Codigo: " + prestador.getCodigo() + "\nNome: " + prestador.getNome() + "\nEmail: " + prestador.getEmail() + "\nTelefone: " + prestador.getTelefone() + "\nData de Nascimento: " + prestador.getDataNascimento() + "\nComissao: " + prestador.getComissao() );
                 arq.save(obj);
             break;
             case 2: 

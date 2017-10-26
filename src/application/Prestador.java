@@ -24,7 +24,8 @@ public class Prestador extends Pessoa {
         super(codigo, nome, email, telefone, sexo, dataNascimento);        
         this.setComissao(comissao);
     }
-    
+
+
     /**
      * 
      * @return double
