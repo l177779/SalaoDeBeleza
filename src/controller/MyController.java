@@ -58,8 +58,7 @@ public class MyController {
             CadastroPrestador obj = arq.load();
             Prestador prestador = obj.getPrestador();
             System.out.println("\nNome: " + prestador.getNome() + "\nEmail: " + prestador.getEmail() + "\nSexo: " + prestador.getSexo());
-            
-            
+
             prog.despedida();
 
             LOGGER.log(Level.INFO, "Saiu do sistema às: {0}", new SimpleDateFormat("HH:mm - dd/MM/yyyy").format(new Date(System.currentTimeMillis())));

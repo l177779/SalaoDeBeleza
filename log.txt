@@ -2,19 +2,19 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2017-10-26T20:18:28</date>
-  <millis>1509056308405</millis>
+  <date>2017-10-26T20:24:05</date>
+  <millis>1509056645351</millis>
   <sequence>0</sequence>
   <logger>controller.Programa</logger>
   <level>INFO</level>
   <class>controller.MyController</class>
   <method>main</method>
   <thread>1</thread>
-  <message>Entrou no sistema às: 20:18 - 26/10/2017</message>
+  <message>Entrou no sistema às: 20:24 - 26/10/2017</message>
 </record>
 <record>
-  <date>2017-10-26T20:18:28</date>
-  <millis>1509056308457</millis>
+  <date>2017-10-26T20:24:05</date>
+  <millis>1509056645429</millis>
   <sequence>1</sequence>
   <logger>controller.Programa</logger>
   <level>INFO</level>
@@ -24,14 +24,14 @@
   <message>Usando Prestador.csv</message>
 </record>
 <record>
-  <date>2017-10-26T20:18:28</date>
-  <millis>1509056308512</millis>
+  <date>2017-10-26T20:24:05</date>
+  <millis>1509056645513</millis>
   <sequence>2</sequence>
   <logger>controller.Programa</logger>
   <level>INFO</level>
   <class>controller.MyController</class>
   <method>main</method>
   <thread>1</thread>
-  <message>Saiu do sistema às: 20:18 - 26/10/2017</message>
+  <message>Saiu do sistema às: 20:24 - 26/10/2017</message>
 </record>
 </log>

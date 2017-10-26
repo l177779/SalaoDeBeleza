@@ -84,7 +84,7 @@ public class ArquivoPrestador {
         BufferedReader source;
         try {
             source = Files.newBufferedReader(arquivoCsv,
-                    StandardCharsets.ISO_8859_1);
+                    StandardCharsets.UTF_8);
             String header = source.readLine();
             String line = null;
 
@@ -92,7 +92,6 @@ public class ArquivoPrestador {
                 Prestador prestador = getPrestadorFromLine(line);
 
                 dados.add(prestador);
-
             }
         } catch (IOException ex) {
             Logger.getLogger(ArquivoPrestador.class.getName()).

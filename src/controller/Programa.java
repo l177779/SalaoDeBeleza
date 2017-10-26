@@ -31,5 +31,4 @@ public class Programa {
     public void despedida(){
         System.out.println("********************* O salão " + Salao.getNome() + " agradece, volte sempre! *********************");
     }
-    
 }
