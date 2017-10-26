@@ -3,14 +3,6 @@
  */
 package controller;
 
-import application.Cliente;
-import application.Prestador;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import model.ArquivoPrestador;
-import model.CadastroPrestador;
 import application.Salao;
 
 /**
