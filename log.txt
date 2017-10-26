@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2017-10-26T20:18:28</date>
+  <millis>1509056308405</millis>
+  <sequence>0</sequence>
+  <logger>controller.Programa</logger>
+  <level>INFO</level>
+  <class>controller.MyController</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Entrou no sistema às: 20:18 - 26/10/2017</message>
+</record>
+<record>
+  <date>2017-10-26T20:18:28</date>
+  <millis>1509056308457</millis>
+  <sequence>1</sequence>
+  <logger>controller.Programa</logger>
+  <level>INFO</level>
+  <class>model.ArquivoPrestador</class>
+  <method>load</method>
+  <thread>1</thread>
+  <message>Usando Prestador.csv</message>
+</record>
+<record>
+  <date>2017-10-26T20:18:28</date>
+  <millis>1509056308512</millis>
+  <sequence>2</sequence>
+  <logger>controller.Programa</logger>
+  <level>INFO</level>
+  <class>controller.MyController</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>Saiu do sistema às: 20:18 - 26/10/2017</message>
+</record>
+</log>

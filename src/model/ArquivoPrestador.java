@@ -6,6 +6,7 @@
 package model;
 
 import application.Prestador;
+import controller.Programa;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -29,7 +30,7 @@ import model.CadastroPrestador;
  *
  */
 public class ArquivoPrestador {
-    private static final Logger LOG = Logger.getLogger(ArquivoPrestador.class.getName());
+    Logger LOGGER = Logger.getLogger(Programa.class.getName());
     private static final String CSV_FILENAME = "Prestador.csv";
     private static final String SERIAL_FILENAME = "Prestador.dat";
     private final Path arquivoCsv;
@@ -40,7 +41,7 @@ public class ArquivoPrestador {
      * Constrói objeto ArquivoPrestador, inicializando informações sobre arquivos.
      */
     public ArquivoPrestador() {
-        LOG.setLevel(Level.INFO);
+        LOGGER.setLevel(Level.INFO);
         arquivoCsv = FileSystems.getDefault().getPath(CSV_FILENAME);
         arquivoSerializado = FileSystems.getDefault().getPath(SERIAL_FILENAME);
     }
@@ -53,10 +54,10 @@ public class ArquivoPrestador {
      */
     public CadastroPrestador load() {
         if (Files.exists(arquivoSerializado)) {
-            LOG.info("Usando serializado" + arquivoSerializado.toString());
+            LOGGER.info("Usando serializado" + arquivoSerializado.toString());
             return loadSerialized();
         } else {
-            LOG.info("Usando " + arquivoCsv.toString());
+            LOGGER.info("Usando " + arquivoCsv.toString());
             return new CadastroPrestador(loadAllFromCsv());
         }
     }
@@ -72,7 +73,7 @@ public class ArquivoPrestador {
                     Files.newOutputStream(arquivoSerializado));
             os.writeObject(dados);
         } catch (IOException ex) {
-            LOG.log(Level.SEVERE, "save", ex);
+            LOGGER.log(Level.SEVERE, "save", ex);
         }
     }
     
@@ -110,7 +111,7 @@ public class ArquivoPrestador {
         try {
             data = formato.parse(str[5]);
         } catch (ParseException ex) {
-            LOG.log(Level.SEVERE, "Parse String to Date", ex);
+            LOGGER.log(Level.SEVERE, "Parse String to Date", ex);
         }
         Prestador prestador = new Prestador(str[1], str[2], str[3], str[4].charAt(0), data, Double.parseDouble(str[7]));
 
@@ -125,7 +126,7 @@ public class ArquivoPrestador {
             is = new ObjectInputStream(Files.newInputStream(arquivoSerializado));
             dados = (CadastroPrestador) is.readObject();
         } catch (ClassNotFoundException | IOException ex) {
-            LOG.log(Level.SEVERE, "loadSerialized", ex);
+            LOGGER.log(Level.SEVERE, "loadSerialized", ex);
         }
         return dados;
     }

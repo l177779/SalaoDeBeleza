@@ -1,63 +1,52 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package controller;
+package application;
 
 /**
  *
  * @author guilherme
  */
 public class Salao {
-    
+
     private static String nome;
     private static String endereco;
     private static String telefone;
-    
+
     /**
-     * 
-     * @return 
+     * @return String nome
      */
     public static String getNome() {
         return Salao.nome;
     }
 
     /**
-     * 
-     * @param nome 
+     * @param nome String
      */
     public final static void setNome(String nome) {
         Salao.nome = nome;
     }        
 
     /**
-     * 
-     * @return 
+     * @return String endereco
      */
     public static String getEndereco() {
         return endereco;
     }
 
     /**
-     * 
-     * @param endereco 
+     * @param endereco String
      */
     public static void setEndereco(String endereco) {
         Salao.endereco = endereco;
     }
 
     /**
-     * 
-     * @return 
+     * @return String telefone
      */
     public static String getTelefone() {
         return telefone;
     }
 
     /**
-     * 
-     * @param telefone 
+     * @param telefone String
      */
     public static void setTelefone(String telefone) {
         Salao.telefone = telefone;
