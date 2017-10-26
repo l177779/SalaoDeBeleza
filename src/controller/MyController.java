@@ -6,6 +6,7 @@ package controller;
 
 import application.Salao;
 import application.Cliente;
+import application.Prestador;
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.logging.FileHandler;
@@ -13,6 +14,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import model.ArquivoPrestador;
+import model.CadastroPrestador;
 
 /**
  *
@@ -49,6 +52,12 @@ public class MyController {
             System.out.println("Clientes cadastrados: \n");
             System.out.println(cli.toString());
             System.out.println(cli2.toString());
+
+            System.out.println("\n\nBuscando um prestador no arquivo: \n");
+            ArquivoPrestador arq = new ArquivoPrestador();
+            CadastroPrestador obj = arq.load();
+            Prestador prestador = obj.getPrestador();
+            System.out.println("\nNome: " + prestador.getNome() + "\nEmail: " + prestador.getEmail() + "\nSexo: " + prestador.getSexo());
 
             prog.despedida();
 
