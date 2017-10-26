@@ -2,25 +2,25 @@
 <!DOCTYPE log SYSTEM "logger.dtd">
 <log>
 <record>
-  <date>2017-10-26T13:03:20</date>
-  <millis>1509030200093</millis>
+  <date>2017-10-26T19:36:59</date>
+  <millis>1509053819199</millis>
   <sequence>0</sequence>
   <logger>controller.Programa</logger>
   <level>INFO</level>
   <class>controller.MyController</class>
   <method>main</method>
   <thread>1</thread>
-  <message>Entrou no sistema às: 13:03 - 26/10/2017</message>
+  <message>Entrou no sistema às: 19:36 - 26/10/2017</message>
 </record>
 <record>
-  <date>2017-10-26T13:03:20</date>
-  <millis>1509030200110</millis>
-  <sequence>1</sequence>
+  <date>2017-10-26T19:36:59</date>
+  <millis>1509053819255</millis>
+  <sequence>2</sequence>
   <logger>controller.Programa</logger>
   <level>INFO</level>
   <class>controller.MyController</class>
   <method>main</method>
   <thread>1</thread>
-  <message>Saiu do sistema às: 13:03 - 26/10/2017</message>
+  <message>Saiu do sistema às: 19:36 - 26/10/2017</message>
 </record>
 </log>

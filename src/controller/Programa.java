@@ -6,10 +6,13 @@
 package controller;
 
 import application.Cliente;
+import application.Prestador;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import model.ArquivoPrestador;
+import model.CadastroPrestador;
 
 /**
  *
@@ -31,6 +34,12 @@ public class Programa {
             System.out.println("Clientes cadastrados: \n");
             System.out.println(cli.toString());
             System.out.println(cli2.toString());
+            
+            System.out.println("Buscando um prestador no arquivo: \n");
+            ArquivoPrestador arq = new ArquivoPrestador();
+            CadastroPrestador obj = arq.load();
+            Prestador prestador = obj.getPrestador();
+            System.out.println("\nNome: " + prestador.getNome() + "\nEmail: " + prestador.getEmail() + "\nSexo: " + prestador.getSexo());
             
         }catch(ParseException ex){
             Logger LOGGER = Logger.getLogger(Programa.class.getName());
