@@ -37,7 +37,7 @@ public class Compra {
     }
 
     /**
-     * @param codigo identificador da compra
+     * @param codigo String
      */
     public final void setCodigo(String codigo) {
         this.codigo = codigo;
@@ -51,7 +51,7 @@ public class Compra {
     }
 
     /**
-     * @param data data da compra
+     * @param data Date
      */
     public final void setData(Date data) {
         this.data = data;
@@ -65,7 +65,7 @@ public class Compra {
     }
 
     /**
-     * @param valor valor da compra
+     * @param valor double
      */
     public final void setValor(double valor) {
         this.valor = valor;

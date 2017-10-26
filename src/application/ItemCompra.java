@@ -38,7 +38,7 @@ public class ItemCompra {
     }
 
     /**
-     * @param qtde quantidade de items
+     * @param qtde int
      */
     public final void setQtde(int qtde) {
         this.qtde = qtde;
@@ -52,7 +52,7 @@ public class ItemCompra {
     }
 
     /**
-     * @param codigoProduto codigo do produto
+     * @param codigoProduto String
      */
     public final void setCodigoProduto(String codigoProduto) {
         this.codigoProduto = codigoProduto;
@@ -66,21 +66,21 @@ public class ItemCompra {
     }
 
     /**
-     * @param codigoCompra codigo da compra
+     * @param codigoCompra String
      */
     public final void setCodigoCompra(String codigoCompra) {
         this.codigoCompra = codigoCompra;
     }
 
     /**
-     * @return double precoItemCompra
+     * @return double preco
      */
     public double getPreco() {
         return preco;
     }
 
     /**
-     * @param preco preco do ItemCompra
+     * @param preco double
      */
     public final void setPreco(double preco) {
         this.preco = preco;

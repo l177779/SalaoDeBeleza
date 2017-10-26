@@ -38,7 +38,7 @@ public class ItemNota {
     }
 
     /**
-     * @param qtde quantidade do ItemNota
+     * @param qtde int
      */
     public final void setQtde(int qtde) {
         this.qtde = qtde;
@@ -52,7 +52,7 @@ public class ItemNota {
     }
 
     /**
-     * @param preco preco do ItemNota
+     * @param preco double
      */
     public final void setPreco(double preco) {
         this.preco = preco;
@@ -66,7 +66,7 @@ public class ItemNota {
     }
 
     /**
-     * @param codigoItemVenda codigo do ItemVenda
+     * @param codigoItemVenda String
      */
     public final void setCodigoItemVenda(String codigoItemVenda) {
         this.codigoItemVenda = codigoItemVenda;
@@ -80,7 +80,7 @@ public class ItemNota {
     }
 
     /**
-     * @param codigoNotaFiscal codigo da NotaFiscal
+     * @param codigoNotaFiscal String
      */
     public final void setCodigoNotaFiscal(String codigoNotaFiscal) {
         this.codigoNotaFiscal = codigoNotaFiscal;

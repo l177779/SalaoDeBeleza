@@ -32,7 +32,7 @@ public class NotaFiscal {
     }
 
     /**
-     * @param numero numero da NotaFiscal
+     * @param numero String
      */
     public final void setNumero(String numero) {
         this.numero = numero;
@@ -46,7 +46,7 @@ public class NotaFiscal {
     }
 
     /**
-     * @param valor valor da NotaFiscal
+     * @param valor double
      */
     public final void setValor(double valor) {
         this.valor = valor;
@@ -60,7 +60,7 @@ public class NotaFiscal {
     }
 
     /**
-     * @param data data da NotaFiscal
+     * @param data Date
      */
     public final void setData(Date data) {
         this.data = data;

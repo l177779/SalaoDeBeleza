@@ -30,7 +30,7 @@ public abstract class ItemVenda {
     }
 
     /**
-     * @param codigo identificador do ItemVenda
+     * @param codigo String
      */
     public final void setCodigo(String codigo) {
         this.codigo = codigo;
@@ -44,7 +44,7 @@ public abstract class ItemVenda {
     }
 
     /**
-     * @param descricao descricao do ItemVenda
+     * @param descricao String
      */
     public final void setDescricao(String descricao) {
         this.descricao = descricao;
@@ -58,7 +58,7 @@ public abstract class ItemVenda {
     }
 
     /**
-     * @param preco preco do ItemVenda
+     * @param preco double
      */
     public final void setPreco(double preco) {
         this.preco = preco;
