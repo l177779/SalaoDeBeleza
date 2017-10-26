@@ -12,7 +12,6 @@ public class Cliente extends Pessoa {
 
     /**
      * Construtor do cliente
-     * @param codigo identificador da pessoa
      * @param nome nome do cliente
      * @param email email do cliente
      * @param telefone telefone do cliente
@@ -26,7 +25,6 @@ public class Cliente extends Pessoa {
     }
 
     /**
-     * Get cpf
      * @return String cpf
      */
     public String getCpf() {
@@ -34,13 +32,16 @@ public class Cliente extends Pessoa {
     }
 
     /**
-     * Set cpf
-     * @param cpf cpf do cliente
+     * @param cpf String
      */
     public final void setCpf(String cpf) {
         this.cpf = cpf;
     } 
-    
+
+    /**
+     * Sobreescrita do metodo toString para retornar os dados basicos do cliente
+     * @return String dadosBasicosCliente
+     */
     @Override
     public String toString() {
         return "Cliente{" + "nome = " + nome + ", telefone = " + telefone + " email = " + email +"}";

@@ -12,6 +12,7 @@ import java.util.Date;
  * @author guilherme
  */
 public class Compra {
+
     private String codigo;
     private Date data;
     private double valor;
@@ -29,23 +30,20 @@ public class Compra {
     }
 
     /**
-     * Get codigo
      * @return String codigo
      */
     public String getCodigo() {
         return codigo;
     }
-    
+
     /**
-     * Set codigo
-     * @param codigo identificador da compra
+     * @param codigo String
      */
     public final void setCodigo(String codigo) {
         this.codigo = codigo;
     }
 
     /**
-     * Get data
      * @return Date dataCompra
      */
     public Date getData() {
@@ -53,15 +51,13 @@ public class Compra {
     }
 
     /**
-     * Set data
-     * @param data data da compra
+     * @param data Date
      */
     public final void setData(Date data) {
         this.data = data;
     }
 
     /**
-     * Get valor
      * @return double valorCompra
      */
     public double getValor() {
@@ -69,8 +65,7 @@ public class Compra {
     }
 
     /**
-     * Set valor
-     * @param valor valor da compra
+     * @param valor double
      */
     public final void setValor(double valor) {
         this.valor = valor;

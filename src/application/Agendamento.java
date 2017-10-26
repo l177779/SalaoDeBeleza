@@ -35,7 +35,6 @@ public class Agendamento {
     }
 
     /**
-     * Get codigo
      * @return String codigo
      */
     public String getCodigo() {
@@ -43,47 +42,41 @@ public class Agendamento {
     }
 
     /**
-     * Set codigo
-     * @param codigo identificador do agendamento
+     * @param codigo String
      */
     public final void setCodigo(String codigo) {
         this.codigo = codigo;
     }
-    
+
     /**
-     * Get codigo do cliente que está realizando o agendamento
      * @return String codigoCliente
      */
     public String getCodigoCliente() {
         return this.codigoCliente;
     }
-    
+
     /**
-     * Set codigo do cliente que está realizando o agendamento
-     * @param cliente identificador do cliente
+     * @param cliente String
      */
     public final void setCodigoCliente(String cliente) {
         this.codigoCliente = cliente;
     }
-    
+
     /**
-     * Get codigo da agenda em que será inserido o agendamento
      * @return String codigoAgenda
      */
     public String getCodigoAgenda() {
         return this.codigoAgenda;
     }
-    
+
     /**
-     * Set codigo da agenda em que será inserido o agendamento
-     * @param codigoAgenda identificador da agenda
+     * @param codigoAgenda String
      */
     public final void setCodigoAgenda(String codigoAgenda) {
         this.codigoAgenda = codigoAgenda;
     }
-    
+
     /**
-     * Get data do agendamento
      * @return Date dataAgendamento
      */
     public Date getData() {
@@ -91,15 +84,13 @@ public class Agendamento {
     }
 
     /**
-     * Set data
-     * @param data data do agendamento
+     * @param data Date
      */
     public final void setData(Date data) {
         this.data = data;
     }  
 
     /**
-     * Get hora do agendamento
      * @return Time horaAgendamento
      */
     public Time getHora() {
@@ -107,15 +98,13 @@ public class Agendamento {
     }
 
     /**
-     * Set hora
-     * @param hora hora do agendamento
+     * @param horaAgendamento Time
      */
-    public final void setHora(Time hora) {
-        this.hora = hora;
+    public final void setHora(Time horaAgendamento) {
+        this.hora = horaAgendamento;
     }         
 
     /**
-     * Get confirmacao do agendamento
      * @return Boolean confirmado
      */
     public Boolean isConfirmado() {
@@ -123,8 +112,7 @@ public class Agendamento {
     }
 
     /**
-     * Set confirmado
-     * @param confirmado boolean que representa o status do agendamento
+     * @param confirmado Boolean
      */
     public final void setConfirmado(Boolean confirmado) {
         this.confirmado = confirmado;
