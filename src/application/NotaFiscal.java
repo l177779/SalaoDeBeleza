@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package application;
 
 import java.util.Date;
@@ -30,7 +25,6 @@ public class NotaFiscal {
     }
 
     /**
-     * Get numero
      * @return String numero
      */
     public String getNumero() {
@@ -38,7 +32,6 @@ public class NotaFiscal {
     }
 
     /**
-     * Set numero
      * @param numero numero da NotaFiscal
      */
     public final void setNumero(String numero) {
@@ -46,7 +39,6 @@ public class NotaFiscal {
     }
 
     /**
-     * Get valor
      * @return double valor
      */
     public double getValor() {
@@ -54,7 +46,6 @@ public class NotaFiscal {
     }
 
     /**
-     * Set valor
      * @param valor valor da NotaFiscal
      */
     public final void setValor(double valor) {
@@ -62,7 +53,6 @@ public class NotaFiscal {
     }
 
     /**
-     * Get data
      * @return Date data
      */
     public Date getData() {
@@ -70,7 +60,6 @@ public class NotaFiscal {
     }
 
     /**
-     * Set data
      * @param data data da NotaFiscal
      */
     public final void setData(Date data) {

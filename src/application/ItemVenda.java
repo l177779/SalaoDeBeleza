@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package application;
 
 /**
@@ -28,7 +23,6 @@ public abstract class ItemVenda {
     }
 
     /**
-     * Get codigo
      * @return String codigo
      */
     public String getCodigo() {
@@ -36,7 +30,6 @@ public abstract class ItemVenda {
     }
 
     /**
-     * Set codigo
      * @param codigo identificador do ItemVenda
      */
     public final void setCodigo(String codigo) {
@@ -44,7 +37,6 @@ public abstract class ItemVenda {
     }
 
     /**
-     * Get descricao
      * @return String descricao
      */
     public String getDescricao() {
@@ -52,7 +44,6 @@ public abstract class ItemVenda {
     }
 
     /**
-     * Set descricao
      * @param descricao descricao do ItemVenda
      */
     public final void setDescricao(String descricao) {
@@ -60,7 +51,6 @@ public abstract class ItemVenda {
     }
 
     /**
-     * Get preco
      * @return double preco
      */
     public double getPreco() {
@@ -68,7 +58,6 @@ public abstract class ItemVenda {
     }
 
     /**
-     * Set preco
      * @param preco preco do ItemVenda
      */
     public final void setPreco(double preco) {

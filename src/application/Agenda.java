@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package application;
 
 import java.util.List;
@@ -30,7 +25,6 @@ public class Agenda {
     }
 
     /**
-     * Get codigo
      * @return String codigo
      */
     public String getCodigo() {
@@ -38,15 +32,13 @@ public class Agenda {
     }
 
     /**
-     * Set codigo
-     * @param codigo identificador da agenda
+     * @param codigo String
      */
     public final void setCodigo(String codigo) {
         this.codigo = codigo;
     }
 
     /**
-     * Get prestador
      * @return String codigoPrestador
      */
     public String getCodigoPrestador() {
@@ -54,15 +46,13 @@ public class Agenda {
     }
 
     /**
-     * Set prestador
-     * @param prestador codigo do prestador dono da agenda
+     * @param prestador String
      */
     public final void setCodigoPrestador(String prestador) {
         this.codigoPrestador = prestador;
     }
 
     /**
-     * Get agendamentos
      * @return List agendamentos
      */
     public List<Agendamento> getAgendamentos() {
@@ -70,8 +60,7 @@ public class Agenda {
     }
 
     /**
-     * Set agendamentos
-     * @param agendamentos lista de agendamentos de servicos do prestador
+     * @param agendamentos List
      */
     public final void setAgendamentos(List<Agendamento> agendamentos) {
         this.agendamentos = agendamentos;

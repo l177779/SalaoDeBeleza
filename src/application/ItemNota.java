@@ -31,7 +31,6 @@ public class ItemNota {
     }
 
     /**
-     * Get quantidade
      * @return int quantidade
      */
     public int getQtde() {
@@ -39,7 +38,6 @@ public class ItemNota {
     }
 
     /**
-     * Set quantidade
      * @param qtde quantidade do ItemNota
      */
     public final void setQtde(int qtde) {
@@ -47,7 +45,6 @@ public class ItemNota {
     }
 
     /**
-     * Get preco
      * @return double preco
      */
     public double getPreco() {
@@ -55,7 +52,6 @@ public class ItemNota {
     }
 
     /**
-     * Set preco
      * @param preco preco do ItemNota
      */
     public final void setPreco(double preco) {
@@ -63,7 +59,6 @@ public class ItemNota {
     }
 
     /**
-     * Get codigo do ItemVenda
      * @return String codigoItemVenda
      */
     public String getCodigoItemVenda() {
@@ -71,7 +66,6 @@ public class ItemNota {
     }
 
     /**
-     * Set codigo do ItemVenda
      * @param codigoItemVenda codigo do ItemVenda
      */
     public final void setCodigoItemVenda(String codigoItemVenda) {
@@ -79,7 +73,6 @@ public class ItemNota {
     }
 
     /**
-     * Get codigo da NotaFiscal
      * @return String codigoNotaFiscal
      */
     public String getCodigoNotaFiscal() {
@@ -87,7 +80,6 @@ public class ItemNota {
     }
 
     /**
-     * Set codigo da NotaFiscal
      * @param codigoNotaFiscal codigo da NotaFiscal
      */
     public final void setCodigoNotaFiscal(String codigoNotaFiscal) {

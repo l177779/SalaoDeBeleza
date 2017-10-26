@@ -26,7 +26,6 @@ public class Cliente extends Pessoa {
     }
 
     /**
-     * Get cpf
      * @return String cpf
      */
     public String getCpf() {
@@ -34,7 +33,6 @@ public class Cliente extends Pessoa {
     }
 
     /**
-     * Set cpf
      * @param cpf cpf do cliente
      */
     public final void setCpf(String cpf) {

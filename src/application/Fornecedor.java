@@ -30,7 +30,6 @@ public class Fornecedor extends Pessoa {
     }
 
     /**
-     * Get cnpj
      * @return String cnpj
      */
     public String getCnpj() {
@@ -38,7 +37,6 @@ public class Fornecedor extends Pessoa {
     }
 
     /**
-     * Set cnpj
      * @param cnpj cnpj do fornecedor
      */
     public final void setCnpj(String cnpj) {

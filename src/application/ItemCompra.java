@@ -31,7 +31,6 @@ public class ItemCompra {
     }
 
     /**
-     * Get quantidade de items
      * @return int quantidade
      */
     public int getQtde() {
@@ -39,7 +38,6 @@ public class ItemCompra {
     }
 
     /**
-     * Set quantidade de items
      * @param qtde quantidade de items
      */
     public final void setQtde(int qtde) {
@@ -47,7 +45,6 @@ public class ItemCompra {
     }
 
     /**
-     * Get codigo do produto
      * @return String codigoProduto
      */
     public String getCodigoProduto() {
@@ -55,7 +52,6 @@ public class ItemCompra {
     }
 
     /**
-     * Set codigo do produto
      * @param codigoProduto codigo do produto
      */
     public final void setCodigoProduto(String codigoProduto) {
@@ -63,7 +59,6 @@ public class ItemCompra {
     }
 
     /**
-     * Get codigo da compra
      * @return String codigoCompra
      */
     public String getCodigoCompra() {
@@ -71,7 +66,6 @@ public class ItemCompra {
     }
 
     /**
-     * Set codigo da compra
      * @param codigoCompra codigo da compra
      */
     public final void setCodigoCompra(String codigoCompra) {
@@ -79,7 +73,6 @@ public class ItemCompra {
     }
 
     /**
-     * Get preco do ItemCompra
      * @return double precoItemCompra
      */
     public double getPreco() {
@@ -87,7 +80,6 @@ public class ItemCompra {
     }
 
     /**
-     * Set preco do ItemCompra
      * @param preco preco do ItemCompra
      */
     public final void setPreco(double preco) {

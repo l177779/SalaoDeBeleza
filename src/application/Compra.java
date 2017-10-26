@@ -30,7 +30,6 @@ public class Compra {
     }
 
     /**
-     * Get codigo
      * @return String codigo
      */
     public String getCodigo() {
@@ -38,7 +37,6 @@ public class Compra {
     }
 
     /**
-     * Set codigo
      * @param codigo identificador da compra
      */
     public final void setCodigo(String codigo) {
@@ -46,7 +44,6 @@ public class Compra {
     }
 
     /**
-     * Get data
      * @return Date dataCompra
      */
     public Date getData() {
@@ -54,7 +51,6 @@ public class Compra {
     }
 
     /**
-     * Set data
      * @param data data da compra
      */
     public final void setData(Date data) {
@@ -62,7 +58,6 @@ public class Compra {
     }
 
     /**
-     * Get valor
      * @return double valorCompra
      */
     public double getValor() {
@@ -70,7 +65,6 @@ public class Compra {
     }
 
     /**
-     * Set valor
      * @param valor valor da compra
      */
     public final void setValor(double valor) {
