@@ -52,13 +52,13 @@ public class ArquivoPrestador {
      * 
      */
     public CadastroPrestador load() {
-        if (Files.exists(arquivoSerializado)) {
-            LOG.info("Usando serializado" + arquivoSerializado.toString());
-            return loadSerialized();
-        } else {
+//        if (Files.exists(arquivoSerializado)) {
+//            LOG.info("Usando serializado" + arquivoSerializado.toString());
+//            return loadSerialized();
+//        } else {
             LOG.info("Usando " + arquivoCsv.toString());
             return new CadastroPrestador(loadAllFromCsv());
-        }
+//        }
     }
     
      /**
