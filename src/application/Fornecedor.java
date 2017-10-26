@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package application;
 
 import java.util.Date;
@@ -14,35 +9,31 @@ import java.util.Date;
 public class Fornecedor extends Pessoa {
 
     private String cnpj;
-    
+
     /**
-     * 
-     * @param codigo
+     * Construtor do fornecedor
      * @param nome
      * @param email
      * @param telefone
      * @param sexo
      * @param dataNascimento    
      */
-    public Fornecedor(String codigo, String nome, String email, String telefone, char sexo, Date dataNascimento, String cnpj) {
-        super(codigo,nome,email,telefone,sexo,dataNascimento);
+    public Fornecedor(String nome, String email, String telefone, char sexo, Date dataNascimento, String cnpj) {
+        super(nome,email,telefone,sexo,dataNascimento);
         this.setCnpj(cnpj);
-    }        
+    }
 
     /**
-     * 
-     * @return String
+     * @return String cnpj
      */
     public String getCnpj() {
         return this.cnpj;
     }
 
     /**
-     * 
-     * @param cnpj 
+     * @param cnpj String
      */
     public final void setCnpj(String cnpj) {
         this.cnpj = cnpj;
-    }   
-    
+    }
 }

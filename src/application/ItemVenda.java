@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package application;
 
 /**
@@ -10,16 +5,16 @@ package application;
  * @author guilherme
  */
 public abstract class ItemVenda {
-    
+
     protected String codigo;
     protected String descricao;
     protected double preco;
 
     /**
-     * 
-     * @param codigo
-     * @param descricao
-     * @param preco 
+     * Construtor do ItemVenda
+     * @param codigo identificador do ItemVenda
+     * @param descricao descricao do ItemVenda
+     * @param preco preco do ItemVenda
      */
     public ItemVenda(String codigo, String descricao, double preco) {
         this.setCodigo(codigo);
@@ -28,51 +23,44 @@ public abstract class ItemVenda {
     }
 
     /**
-     * 
-     * @return String
+     * @return String codigo
      */
     public String getCodigo() {
         return this.codigo;
     }
 
     /**
-     * 
-     * @param codigo 
+     * @param codigo String
      */
     public final void setCodigo(String codigo) {
         this.codigo = codigo;
     }
 
     /**
-     * 
-     * @return String
+     * @return String descricao
      */
     public String getDescricao() {
         return this.descricao;
     }
 
     /**
-     * 
-     * @param descricao 
+     * @param descricao String
      */
     public final void setDescricao(String descricao) {
         this.descricao = descricao;
     }
 
     /**
-     * 
-     * @return double
+     * @return double preco
      */
     public double getPreco() {
         return this.preco;
     }
 
     /**
-     * 
-     * @param preco 
+     * @param preco double
      */
     public final void setPreco(double preco) {
         this.preco = preco;
     }
-    
 }

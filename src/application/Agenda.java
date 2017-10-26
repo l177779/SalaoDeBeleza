@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package application;
 
 import java.util.List;
@@ -12,107 +7,62 @@ import java.util.List;
  * @author guilherme
  */
 public class Agenda {
-    
+
     private String codigo;    
-    private Prestador prestador;
-    private Cliente cliente;
-    private List<Servico> servicos;
+    private String codigoPrestador;
     private List<Agendamento> agendamentos;   
 
     /**
-     * 
-     * @param codigo
-     * @param prestador
-     * @param cliente
-     * @param servicos
-     * @param agendamentos 
+     * Construtor da agenda
+     * @param codigo identificador da agenda
+     * @param codigoPrestador codigo do prestador dono da agenda
+     * @param agendamentos lista de agendamentos de servicos do prestador
      */
-    public Agenda(String codigo, Prestador prestador, Cliente cliente, List<Servico> servicos, List<Agendamento> agendamentos) {
+    public Agenda(String codigo, String codigoPrestador, List<Agendamento> agendamentos) {
         setCodigo(codigo);
-        setPrestador(prestador);
-        setCliente(cliente);
-        setServicos(servicos);
+        setCodigoPrestador(codigoPrestador);
         setAgendamentos(agendamentos);
     }
-    
+
     /**
-     * 
-     * @return 
+     * @return String codigo
      */
     public String getCodigo() {
         return codigo;
     }
 
     /**
-     * 
-     * @param codigo 
+     * @param codigo String
      */
     public final void setCodigo(String codigo) {
         this.codigo = codigo;
     }
 
     /**
-     * 
-     * @return 
+     * @return String codigoPrestador
      */
-    public Prestador getPrestador() {
-        return prestador;
+    public String getCodigoPrestador() {
+        return codigoPrestador;
     }
 
     /**
-     * 
-     * @param prestador 
+     * @param prestador String
      */
-    public final void setPrestador(Prestador prestador) {
-        this.prestador = prestador;
+    public final void setCodigoPrestador(String prestador) {
+        this.codigoPrestador = prestador;
     }
 
     /**
-     * 
-     * @return 
-     */
-    public Cliente getCliente() {
-        return cliente;
-    }
-
-    /**
-     * 
-     * @param cliente 
-     */
-    public final void setCliente(Cliente cliente) {
-        this.cliente = cliente;
-    }
-
-    /**
-     * 
-     * @return 
-     */
-    public List<Servico> getServicos() {
-        return servicos;
-    }
-
-    /**
-     * 
-     * @param servicos 
-     */
-    public final void setServicos(List<Servico> servicos) {
-        this.servicos = servicos;
-    }
-
-    /**
-     * 
-     * @return 
+     * @return List agendamentos
      */
     public List<Agendamento> getAgendamentos() {
         return agendamentos;
     }
 
     /**
-     * 
-     * @param agendamentos 
+     * @param agendamentos List
      */
     public final void setAgendamentos(List<Agendamento> agendamentos) {
         this.agendamentos = agendamentos;
-    }
-    
+    }   
 }

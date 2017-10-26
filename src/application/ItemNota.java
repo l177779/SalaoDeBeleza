@@ -10,14 +10,14 @@ package application;
  * @author guilherme
  */
 public class ItemNota {
-    
+
     private int qtde;
     private double preco;
     private String codigoItemVenda;
     private String codigoNotaFiscal;
 
     /**
-     * 
+     * Construtor do ItemNota
      * @param qtde
      * @param preco
      * @param codigoItemVenda
@@ -31,64 +31,56 @@ public class ItemNota {
     }
 
     /**
-     * 
-     * @return 
+     * @return int quantidade
      */
     public int getQtde() {
         return qtde;
     }
 
     /**
-     * 
-     * @param qtde 
+     * @param qtde int
      */
     public final void setQtde(int qtde) {
         this.qtde = qtde;
     }
 
     /**
-     * 
-     * @return 
+     * @return double preco
      */
     public double getPreco() {
         return preco;
     }
 
     /**
-     * 
-     * @param preco 
+     * @param preco double
      */
     public final void setPreco(double preco) {
         this.preco = preco;
     }
 
     /**
-     * 
-     * @return 
+     * @return String codigoItemVenda
      */
     public String getCodigoItemVenda() {
         return codigoItemVenda;
     }
 
     /**
-     * 
-     * @param codigoItemVenda 
+     * @param codigoItemVenda String
      */
     public final void setCodigoItemVenda(String codigoItemVenda) {
         this.codigoItemVenda = codigoItemVenda;
     }
 
     /**
-     * 
-     * @return 
+     * @return String codigoNotaFiscal
      */
     public String getCodigoNotaFiscal() {
         return codigoNotaFiscal;
     }
 
     /**
-     * 
-     * @param codigoNotaFiscal 
+     * @param codigoNotaFiscal String
      */
     public final void setCodigoNotaFiscal(String codigoNotaFiscal) {
         this.codigoNotaFiscal = codigoNotaFiscal;

@@ -6,7 +6,8 @@ import java.util.Date;
  *
  * @author guilherme
  */
-public abstract class Pessoa {    
+public abstract class Pessoa {
+
     protected String codigo;
     protected String nome;
     protected String email;    
@@ -16,16 +17,14 @@ public abstract class Pessoa {
     protected boolean status;
 
     /**
-     *
-     * @param codigo
-     * @param nome
-     * @param email
-     * @param telefone
-     * @param sexo
-     * @param dataNascimento
+     * Construtor de Pessoa
+     * @param nome nome da pessoa
+     * @param email email da pessoa
+     * @param telefone telefone da pessoa
+     * @param sexo sexo da pessoa
+     * @param dataNascimento data de nascimento da pessoa
      */
-    public Pessoa(String codigo, String nome, String email, String telefone, char sexo, Date dataNascimento) {               
-        this.setCodigo(codigo);
+    public Pessoa(String nome, String email, String telefone, char sexo, Date dataNascimento) {               
         this.setNome(nome);
         this.setEmail(email);
         this.setTelefone(telefone);
@@ -35,115 +34,100 @@ public abstract class Pessoa {
     }       
 
     /**
-     * 
-     * @return String
+     * @return String codigo
      */
     public String getCodigo() {
         return this.codigo;
     }
 
     /**
-     * 
-     * @param codigo 
+     * @param codigo String
      */
     public final void setCodigo(String codigo) {
         this.codigo = codigo;
     }
-    
+
     /**
-     * 
-     * @return String
+     * @return String nome
      */
     public String getNome() {
         return this.nome;
     }
 
     /**
-     * 
-     * @param nome 
+     * @param nome String
      */
     public final void setNome(String nome) {
         this.nome = nome;
     }
 
     /**
-     * 
-     * @return String
+     * @return String email
      */
     public String getEmail() {
         return this.email;
     }
 
     /**
-     * 
-     * @param email 
+     * @param email String
      */
     public final void setEmail(String email) {
         this.email = email;
     }
 
     /**
-     * 
-     * @return String
+     * @return String telefone
      */
     public String getTelefone() {
         return this.telefone;
     }
 
     /**
-     * 
-     * @param telefone 
+     * @param telefone String
      */
     public final void setTelefone(String telefone) {
         this.telefone = telefone;
     }
 
     /**
-     * 
-     * @return 
+     * @return char sexo
      */
     public char getSexo() {
         return this.sexo;
     }
 
     /**
-     * 
-     * @param sexo 
+     * @param sexo char
      */
     public final void setSexo(char sexo) {
         this.sexo = sexo;
     }
 
     /**
-     * 
-     * @return Date
+     * @return Date dataNascimento
      */
     public Date getDataNascimento() {
         return this.dataNascimento;
     }
 
     /**
-     * 
-     * @param dataNascimento 
+     * @param dataNascimento Date
      */
     public final void setDataNascimento(Date dataNascimento) {
         this.dataNascimento = dataNascimento;
     }    
 
     /**
-     * 
-     * @param status 
+     * @param status boolean
      */
     public final void setAtivo(boolean status) {
         this.status = status;
     }
-    
+
     /**
-     * 
-     * @return boolean
+     * @return boolean status
      */   
     public boolean isAtivo(){
         return this.status;
     }
-    
 }
