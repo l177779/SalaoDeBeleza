@@ -1,7 +1,5 @@
 package application;
 
-import java.util.Date;
-
 /**
  *
  * @author guilherme
@@ -13,7 +11,7 @@ public abstract class Pessoa {
     protected String email;    
     protected String telefone;
     protected char sexo;
-    protected Date dataNascimento;
+    protected String dataNascimento;
     protected boolean status;
 
     /**
@@ -24,7 +22,7 @@ public abstract class Pessoa {
      * @param sexo sexo da pessoa
      * @param dataNascimento data de nascimento da pessoa
      */
-    public Pessoa(String nome, String email, String telefone, char sexo, Date dataNascimento) {               
+    public Pessoa(String nome, String email, String telefone, char sexo, String dataNascimento) {               
         this.setNome(nome);
         this.setEmail(email);
         this.setTelefone(telefone);
@@ -106,14 +104,14 @@ public abstract class Pessoa {
     /**
      * @return Date dataNascimento
      */
-    public Date getDataNascimento() {
+    public String getDataNascimento() {
         return this.dataNascimento;
     }
 
     /**
      * @param dataNascimento Date
      */
-    public final void setDataNascimento(Date dataNascimento) {
+    public final void setDataNascimento(String dataNascimento) {
         this.dataNascimento = dataNascimento;
     }    
 

@@ -1,7 +1,5 @@
 package application;
 
-import java.util.Date;
-
 /**
  * 
  * @author guilherme
@@ -19,7 +17,7 @@ public class Prestador extends Pessoa {
     * @param dataNascimento data de nascimento do prestador
     * @param comissao porcentagem de comissao referente ao prestador
     */
-    public Prestador(String nome, String email, String telefone, char sexo, Date dataNascimento, double comissao) {
+    public Prestador(String nome, String email, String telefone, char sexo, String dataNascimento, double comissao) {
         super(nome, email, telefone, sexo, dataNascimento);        
         this.setComissao(comissao);
     }

@@ -112,7 +112,7 @@ public class ArquivoPrestador {
         } catch (ParseException ex) {
             LOGGER.log(Level.SEVERE, "Parse String to Date", ex);
         }
-        Prestador prestador = new Prestador(str[1], str[2], str[3], str[4].charAt(0), data, Double.parseDouble(str[7]));
+        Prestador prestador = new Prestador(str[1], str[2], str[3], str[4].charAt(0), str[5], Double.parseDouble(str[7]));
 
         return prestador;
     }

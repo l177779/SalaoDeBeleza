@@ -342,7 +342,7 @@ public class Cadastro extends javax.swing.JFrame {
         char sexoPessoa = rdFeminino.isEnabled()?'F':'M';
         String nasc = dtNasc.getText();
         if (rdCliente.isEnabled()){
-            //Cliente cli = new Cliente(nome, cpf, email, fone, sexoPessoa, nasc);
+            Cliente cli = new Cliente(nome, cpf, email, fone, sexoPessoa, nasc);
         }
     }//GEN-LAST:event_btnCadastrarMouseClicked
 

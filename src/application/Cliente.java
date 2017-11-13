@@ -1,7 +1,5 @@
 package application;
 
-import java.util.Date;
-
 /**
  * 
  * @author guilherme
@@ -19,7 +17,7 @@ public class Cliente extends Pessoa {
      * @param dataNascimento data de nascimento do cliente
      * @param cpf cpf do cliente
      */
-    public Cliente(String nome, String cpf, String email, String telefone, char sexo, Date dataNascimento) {
+    public Cliente(String nome, String cpf, String email, String telefone, char sexo, String dataNascimento) {
         super(nome, email, telefone, sexo, dataNascimento);
         this.setCpf(cpf);
     }

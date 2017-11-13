@@ -1,7 +1,5 @@
 package application;
 
-import java.util.Date;
-
 /**
  *
  * @author guilherme
@@ -18,7 +16,7 @@ public class Fornecedor extends Pessoa {
      * @param sexo
      * @param dataNascimento    
      */
-    public Fornecedor(String nome, String email, String telefone, char sexo, Date dataNascimento, String cnpj) {
+    public Fornecedor(String nome, String email, String telefone, char sexo, String dataNascimento, String cnpj) {
         super(nome,email,telefone,sexo,dataNascimento);
         this.setCnpj(cnpj);
     }
