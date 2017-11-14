@@ -1,51 +1,31 @@
 package application;
 
-import java.sql.Time;
-import java.util.Date;
-
 /**
  * 
  * @author guilherme
  */
 public class Agendamento {
 
-    private String codigo;
     private String codigoCliente;
     private String codigoAgenda;
-    private Date data;
-    private Time hora;
+    private String data;
+    private String hora;
     private Boolean confirmado;
 
     /**
      * Construtor do agendamento
-     * @param codigo identificador do agendamento
      * @param codigoCliente identificador do cliente que está realizando o agendamento
      * @param codigoAgenda identificador da agenda em que o agendamento será inserido
      * @param data data do agendamento
      * @param hora hora do agendamento
      * @param confirmado status do agendamento (confirmado ou pendente)
      */
-    public Agendamento(String codigo, String codigoCliente, String codigoAgenda, Date data, Time hora, Boolean confirmado) {
-        setCodigo(codigo);
+    public Agendamento(String codigoCliente, String codigoAgenda, String data, String hora, Boolean confirmado) {
         setCodigoCliente(codigoCliente);
         setCodigoAgenda(codigoAgenda);
         setData(data);
         setHora(hora);
         setConfirmado(confirmado);
-    }
-
-    /**
-     * @return String codigo
-     */
-    public String getCodigo() {
-        return this.codigo;
-    }
-
-    /**
-     * @param codigo String
-     */
-    public final void setCodigo(String codigo) {
-        this.codigo = codigo;
     }
 
     /**
@@ -79,28 +59,28 @@ public class Agendamento {
     /**
      * @return Date dataAgendamento
      */
-    public Date getData() {
+    public String getData() {
         return this.data;
     }
 
     /**
      * @param data Date
      */
-    public final void setData(Date data) {
+    public final void setData(String data) {
         this.data = data;
     }  
 
     /**
      * @return Time horaAgendamento
      */
-    public Time getHora() {
+    public String getHora() {
         return this.hora;
     }
 
     /**
      * @param horaAgendamento Time
      */
-    public final void setHora(Time horaAgendamento) {
+    public final void setHora(String horaAgendamento) {
         this.hora = horaAgendamento;
     }         
 

@@ -56,6 +56,11 @@ public class Inicial extends javax.swing.JFrame {
 
         btnConsultar.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
         btnConsultar.setText("Consulta");
+        btnConsultar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnConsultarMouseClicked(evt);
+            }
+        });
         btnConsultar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnConsultarActionPerformed(evt);
@@ -63,7 +68,12 @@ public class Inicial extends javax.swing.JFrame {
         });
 
         btnAgendamento.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
-        btnAgendamento.setText("Agendamento");
+        btnAgendamento.setText("Agendar Horário");
+        btnAgendamento.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnAgendamentoMouseClicked(evt);
+            }
+        });
         btnAgendamento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAgendamentoActionPerformed(evt);
@@ -74,23 +84,25 @@ public class Inicial extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addComponent(btnCadastro)
-                .addGap(53, 53, 53)
-                .addComponent(btnConsultar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnAgendamento)
-                .addGap(32, 32, 32))
+                .addGap(154, 154, 154))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(56, 56, 56)
-                        .addComponent(jLabel1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(106, 106, 106)
-                        .addComponent(jLabel2)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jLabel2))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(56, 56, 56)
+                        .addComponent(jLabel1)))
+                .addGap(32, 60, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(90, 90, 90)
+                .addComponent(btnCadastro)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnConsultar)
+                .addGap(76, 76, 76))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -99,12 +111,13 @@ public class Inicial extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(35, 35, 35)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnConsultar)
-                    .addComponent(btnAgendamento)
-                    .addComponent(btnCadastro))
-                .addGap(96, 96, 96))
+                    .addComponent(btnCadastro)
+                    .addComponent(btnConsultar))
+                .addGap(31, 31, 31)
+                .addComponent(btnAgendamento)
+                .addGap(51, 51, 51))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -138,6 +151,18 @@ public class Inicial extends javax.swing.JFrame {
         Cadastro cad = new Cadastro();
         cad.setVisible(true);
     }//GEN-LAST:event_btnCadastroMouseClicked
+
+    private void btnAgendamentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAgendamentoMouseClicked
+        // TODO add your handling code here:
+        /*AgendarHorario ah = new AgendarHorario();
+        ah.setVisible(true);*/
+    }//GEN-LAST:event_btnAgendamentoMouseClicked
+
+    private void btnConsultarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnConsultarMouseClicked
+        // TODO add your handling code here:
+        Consulta cons = new Consulta();
+        cons.setVisible(true);
+    }//GEN-LAST:event_btnConsultarMouseClicked
 
     /**
      * @param args the command line arguments

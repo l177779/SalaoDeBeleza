@@ -6,7 +6,7 @@
 package view;
 
 import application.Cliente;
-import java.util.Date;
+import application.Prestador;
 
 /**
  *
@@ -317,7 +317,7 @@ public class Cadastro extends javax.swing.JFrame {
 
     private void rdPrestadorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rdPrestadorMouseClicked
         // TODO add your handling code here:
-        lblCpf.setText("CNPJ:");
+        lblCpf.setText("Comissão:");
     }//GEN-LAST:event_rdPrestadorMouseClicked
 
     private void rdClienteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rdClienteMouseClicked
@@ -331,6 +331,7 @@ public class Cadastro extends javax.swing.JFrame {
 
     private void btnVoltarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVoltarMouseClicked
         // TODO add your handling code here:
+        super.dispose();
     }//GEN-LAST:event_btnVoltarMouseClicked
 
     private void btnCadastrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCadastrarMouseClicked
@@ -343,6 +344,9 @@ public class Cadastro extends javax.swing.JFrame {
         String nasc = dtNasc.getText();
         if (rdCliente.isEnabled()){
             Cliente cli = new Cliente(nome, cpf, email, fone, sexoPessoa, nasc);
+        } else {
+            double comissao = Double.parseDouble(cpf);
+            Prestador prest = new Prestador(nome, email, fone, sexoPessoa, nasc, comissao);
         }
     }//GEN-LAST:event_btnCadastrarMouseClicked
 
