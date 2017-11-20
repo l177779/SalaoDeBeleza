@@ -6,7 +6,9 @@
 package view;
 
 import application.Cliente;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import model.ArquivoCliente;
 import model.CadastroCliente;
 
@@ -210,11 +212,17 @@ public class Inicial extends javax.swing.JFrame {
 
         
         String cliente[] = new String[7];
-        cliente = obj.getCliente();
+        cliente = obj.getCliente(0);
         System.out.println(Arrays.toString(cliente));
         System.out.println("\nQuantidade Clientes: " + obj.getQuantidadeClientes());
-//        String cliente2[] =  new String[]{"1", "Jose","33333333322", "ze@gmail.com", "1112-1111", "m", "12/12/2012"};
-//        obj.insereCliente(cliente2);
+        List<Cliente> lista = new ArrayList<>();
+        lista = obj.getListaCliente();
+        int i = 0;
+        for (i = 0; i < lista.size(); i++) {
+            System.out.println("Nome: " + lista.get(i).getNome());
+        }
+//        Cliente teste = new Cliente("Neymar", "99999999944", "c9@gmail.com", "2929-9292", 'm', "09/09/2009");
+//        obj.insereCliente(teste);
 //        System.out.println("\nQuantidade Clientes: " + obj.getQuantidadeClientes());
 
         arq.save(obj);
