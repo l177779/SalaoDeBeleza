@@ -105,6 +105,13 @@ public class ArquivoPrestador {
         String str[] = new String[8];
         str = line.split(",");
 
+        Date data = new Date();
+        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+        try {
+            data = formato.parse(str[5]);
+        } catch (ParseException ex) {
+            LOGGER.log(Level.SEVERE, "Parse String to Date", ex);
+        }
         Prestador prestador = new Prestador(str[1], str[2], str[3], str[4].charAt(0), str[5], Double.parseDouble(str[7]));
 
         return prestador;

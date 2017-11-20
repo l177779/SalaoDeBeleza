@@ -16,10 +16,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -39,7 +36,7 @@ import java.util.logging.Logger;
 public class ArquivoCliente {
     Logger LOGGER = Logger.getLogger(Programa.class.getName());
     private static final String CSV_FILENAME = "Cliente.csv";
-    private static final String SERIAL_FILENAME = "Cliente.dat";
+    private static final String SERIAL_FILENAME = "CLIENTE.dat";
     private final Path arquivoCsv;
     private final Path arquivoSerializado;
     
@@ -61,7 +58,7 @@ public class ArquivoCliente {
      */
     public CadastroCliente load() {
         if (Files.exists(arquivoSerializado)) {
-            LOGGER.info("Usando serializado" + arquivoSerializado.toString());
+            LOGGER.info("Usando serializado " + arquivoSerializado.toString());
             return loadSerialized();
         } else {
             LOGGER.info("Usando " + arquivoCsv.toString());
@@ -84,9 +81,9 @@ public class ArquivoCliente {
         }
     }
     
-    private List<Cliente> loadAllFromCsv() {
+    private List<String[]> loadAllFromCsv() {
         
-    List<Cliente> dados = new ArrayList<>();
+        List<String[]> dados = new ArrayList<>();
 
         BufferedReader source;
         try {
@@ -96,8 +93,8 @@ public class ArquivoCliente {
             String line = null;
 
             while ((line = source.readLine()) != null) {
-                Cliente cliente = getClienteFromLine(line);
-
+                String cliente[] = new String[7];
+                cliente = getClienteFromLine(line);
                 dados.add(cliente);
             }
         } catch (IOException ex) {
@@ -107,14 +104,8 @@ public class ArquivoCliente {
         return dados;
     }
     
-    private Cliente getClienteFromLine(String line) {
-
-        String str[] = new String[8];
-        str = line.split(",");
-
-        Cliente cliente = new Cliente(str[1], str[2], str[3], str[4], str[5].charAt(0), str[6]);
-
-        return cliente;
+    private String[] getClienteFromLine(String line) {
+        return line.split(",");
     }
 
     private CadastroCliente loadSerialized() {

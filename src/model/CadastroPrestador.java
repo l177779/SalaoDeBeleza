@@ -33,4 +33,22 @@ public class CadastroPrestador {
     public Prestador getPrestador() {
         return prestadores.get(0);
     }
+    
+    /**
+     * Obtem o numero de prestadores
+     * 
+     * @return um inteiro dcom o numero de prestadores
+     */
+    public int getQuantidadePrestadores() {
+        return prestadores.size();
+    }
+    
+    /**
+     * Adiciona um Prestador na lista
+     * 
+     * @return 
+     */
+    public void inserePrestador(Prestador prestador) {
+        prestadores.add(prestador);
+    }
 }

@@ -5,6 +5,11 @@
  */
 package view;
 
+import application.Cliente;
+import java.util.Arrays;
+import model.ArquivoCliente;
+import model.CadastroCliente;
+
 /**
  *
  * @author lais
@@ -198,6 +203,22 @@ public class Inicial extends javax.swing.JFrame {
                 new Inicial().setVisible(true);
             }
         });
+        
+        System.out.println("\n\nBuscando um Cliente no arquivo: \n");
+        ArquivoCliente arq = new ArquivoCliente();
+        CadastroCliente obj = arq.load();
+
+        
+        String cliente[] = new String[7];
+        cliente = obj.getCliente();
+        System.out.println(Arrays.toString(cliente));
+        System.out.println("\nQuantidade Clientes: " + obj.getQuantidadeClientes());
+//        String cliente2[] =  new String[]{"1", "Jose","33333333322", "ze@gmail.com", "1112-1111", "m", "12/12/2012"};
+//        obj.insereCliente(cliente2);
+//        System.out.println("\nQuantidade Clientes: " + obj.getQuantidadeClientes());
+
+        arq.save(obj);
+    
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
