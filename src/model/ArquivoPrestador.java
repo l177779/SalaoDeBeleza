@@ -32,7 +32,7 @@ import model.CadastroPrestador;
 public class ArquivoPrestador {
     Logger LOGGER = Logger.getLogger(Programa.class.getName());
     private static final String CSV_FILENAME = "Prestador.csv";
-    private static final String SERIAL_FILENAME = "Prestador.dat";
+    private static final String SERIAL_FILENAME = "PRESTADOR.dat";
     private final Path arquivoCsv;
     private final Path arquivoSerializado;
     
@@ -54,7 +54,7 @@ public class ArquivoPrestador {
      */
     public CadastroPrestador load() {
         if (Files.exists(arquivoSerializado)) {
-            LOGGER.info("Usando serializado" + arquivoSerializado.toString());
+            LOGGER.info("Usando serializado " + arquivoSerializado.toString());
             return loadSerialized();
         } else {
             LOGGER.info("Usando " + arquivoCsv.toString());
@@ -77,10 +77,9 @@ public class ArquivoPrestador {
         }
     }
     
-    private List<Prestador> loadAllFromCsv() {
+    private List<String[]> loadAllFromCsv() {
         
-    List<Prestador> dados = new ArrayList<>();
-
+        List<String[]> dados = new ArrayList<>();
         BufferedReader source;
         try {
             source = Files.newBufferedReader(arquivoCsv,
@@ -89,8 +88,8 @@ public class ArquivoPrestador {
             String line = null;
 
             while ((line = source.readLine()) != null) {
-                Prestador prestador = getPrestadorFromLine(line);
-
+                String prestador[] = new String[8];
+                prestador = getPrestadorFromLine(line);
                 dados.add(prestador);
             }
         } catch (IOException ex) {
@@ -100,21 +99,8 @@ public class ArquivoPrestador {
         return dados;
     }
     
-    private Prestador getPrestadorFromLine(String line) {
-
-        String str[] = new String[8];
-        str = line.split(",");
-
-        Date data = new Date();
-        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
-        try {
-            data = formato.parse(str[5]);
-        } catch (ParseException ex) {
-            LOGGER.log(Level.SEVERE, "Parse String to Date", ex);
-        }
-        Prestador prestador = new Prestador(str[1], str[2], str[3], str[4].charAt(0), str[5], Double.parseDouble(str[7]));
-
-        return prestador;
+    private String[] getPrestadorFromLine(String line) {
+        return line.split(",");
     }
 
 

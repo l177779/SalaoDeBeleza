@@ -54,15 +54,6 @@ public class CadastroCliente implements Serializable{
         return lista;
     }
     
-    /**
-     * Obtem o numero de clientes
-     * 
-     * @return um inteiro dcom o numero de clientes
-     */
-    public int getQuantidadeClientes() {
-        return clientes.size();
-    }
-    
      /**
      * Adiciona um Cliente na lista
      * 
