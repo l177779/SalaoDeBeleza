@@ -5,7 +5,8 @@
  */
 package model;
 
-import application.Prestador;
+
+import application.Cliente;
 import controller.Programa;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -15,50 +16,53 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import model.CadastroPrestador;
+//import model.CadastroCliente;
 
 /**
- * Esta classe provê acesso aos dados persistentes com os dados de Prestador. Se arquivo
+ *
+ * @author alekatao
+ */
+
+
+/**
+ * Esta classe provê acesso aos dados persistentes com os dados de Cliente. Se arquivo
  * serializado existe, é utilizado. Caso contrário, os dados são lidos do arquivo CSV.
  *
  */
-public class ArquivoPrestador {
+public class ArquivoCliente {
     Logger LOGGER = Logger.getLogger(Programa.class.getName());
-    private static final String CSV_FILENAME = "Prestador.csv";
-    private static final String SERIAL_FILENAME = "PRESTADOR.dat";
+    private static final String CSV_FILENAME = "Cliente.csv";
+    private static final String SERIAL_FILENAME = "CLIENTE.dat";
     private final Path arquivoCsv;
     private final Path arquivoSerializado;
     
     
     /**
-     * Constrói objeto ArquivoPrestador, inicializando informações sobre arquivos.
+     * Constrói objeto ArquivoCliente, inicializando informações sobre arquivos.
      */
-    public ArquivoPrestador() {
+    public ArquivoCliente() {
         LOGGER.setLevel(Level.INFO);
         arquivoCsv = FileSystems.getDefault().getPath(CSV_FILENAME);
         arquivoSerializado = FileSystems.getDefault().getPath(SERIAL_FILENAME);
     }
     
      /**
-     * Carrega os dados do disco para um objeto CadastroPrestador. Se arquivo serializado existe, é utilizado.
+     * Carrega os dados do disco para um objeto CadastroCliente. Se arquivo serializado existe, é utilizado.
      *
-     * @return Referência para objeto com dados de Prestadores.
+     * @return Referência para objeto com dados de Clientes.
      * 
      */
-    public CadastroPrestador load() {
+    public CadastroCliente load() {
         if (Files.exists(arquivoSerializado)) {
             LOGGER.info("Usando serializado " + arquivoSerializado.toString());
             return loadSerialized();
         } else {
             LOGGER.info("Usando " + arquivoCsv.toString());
-            return new CadastroPrestador(loadAllFromCsv());
+            return new CadastroCliente(loadAllFromCsv());
         }
     }
     
@@ -67,7 +71,7 @@ public class ArquivoPrestador {
      *
      * @param dados Referência para objeto com dados pré-carregados
      */
-    public void save(CadastroPrestador dados) {
+    public void save(CadastroCliente dados) {
         try {
             ObjectOutputStream os = new ObjectOutputStream(
                     Files.newOutputStream(arquivoSerializado));
@@ -80,6 +84,7 @@ public class ArquivoPrestador {
     private List<String[]> loadAllFromCsv() {
         
         List<String[]> dados = new ArrayList<>();
+
         BufferedReader source;
         try {
             source = Files.newBufferedReader(arquivoCsv,
@@ -88,28 +93,27 @@ public class ArquivoPrestador {
             String line = null;
 
             while ((line = source.readLine()) != null) {
-                String prestador[] = new String[8];
-                prestador = getPrestadorFromLine(line);
-                dados.add(prestador);
+                String cliente[] = new String[7];
+                cliente = getClienteFromLine(line);
+                dados.add(cliente);
             }
         } catch (IOException ex) {
-            Logger.getLogger(ArquivoPrestador.class.getName()).
+            Logger.getLogger(ArquivoCliente.class.getName()).
                     log(Level.SEVERE, "loadAllFromCsv", ex);
         }
         return dados;
     }
     
-    private String[] getPrestadorFromLine(String line) {
+    private String[] getClienteFromLine(String line) {
         return line.split(",");
     }
 
-
-    private CadastroPrestador loadSerialized() {
+    private CadastroCliente loadSerialized() {
         ObjectInputStream is;
-        CadastroPrestador dados = null;
+        CadastroCliente dados = null;
         try {
             is = new ObjectInputStream(Files.newInputStream(arquivoSerializado));
-            dados = (CadastroPrestador) is.readObject();
+            dados = (CadastroCliente) is.readObject();
         } catch (ClassNotFoundException | IOException ex) {
             LOGGER.log(Level.SEVERE, "loadSerialized", ex);
         }

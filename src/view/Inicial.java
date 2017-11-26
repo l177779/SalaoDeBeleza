@@ -5,6 +5,16 @@
  */
 package view;
 
+import application.Cliente;
+import application.Prestador;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import model.ArquivoCliente;
+import model.ArquivoPrestador;
+import model.CadastroCliente;
+import model.CadastroPrestador;
+
 /**
  *
  * @author lais
@@ -198,6 +208,60 @@ public class Inicial extends javax.swing.JFrame {
                 new Inicial().setVisible(true);
             }
         });
+        
+        System.out.println("\n\nBuscando um Cliente no arquivo: \n");
+        // cria objetos de arquivo
+        ArquivoCliente arq = new ArquivoCliente();
+        CadastroCliente obj = arq.load();
+
+        // cria um array de strings com os dados do Cliente do index 0 e exibe
+        String cliente[] = new String[7];
+        cliente = obj.getCliente(0);
+        System.out.println(Arrays.toString(cliente));
+        
+        // quantidade atual da lista
+        System.out.println("\nQuantidade Clientes: " + obj.getListaCliente().size());
+        
+        // Lista de Prestadores
+        List<Cliente> lista = new ArrayList<>();
+        lista = obj.getListaCliente();
+        int i = 0;
+        for (i = 0; i < lista.size(); i++) {
+            System.out.println("Nome: " + lista.get(i).getNome());
+        }
+        
+        // Exemplo de insercao de Cliente
+//        Cliente teste = new Cliente("Pogba", "99999999944", "c9@gmail.com", "2929-9292", 'm', "09/09/2009");
+//        obj.insereCliente(teste);
+//        System.out.println("\nQuantidade Clientes: " + obj.getQuantidadeClientes());
+
+        // Salva arquivo
+        arq.save(obj);
+    
+        
+        System.out.println("\n\nBuscando um Prestador no arquivo: \n");
+        // cria objetos de arquivo
+        ArquivoPrestador arqP = new ArquivoPrestador();
+        CadastroPrestador objP = arqP.load();
+        
+        // cria um array de strings com os dados do Prestador do index 0 e exibe
+        String prestador[] = new String[8];
+        prestador = objP.getPrestador(0);
+        System.out.println(Arrays.toString(prestador));
+        
+        // quantidade atual da lista
+        System.out.println("\nQuantidade Prestadores: " + objP.getListaPrestador().size());
+        
+        // Lista de Prestadores
+        List<Prestador> listaP = new ArrayList<>();
+        listaP = objP.getListaPrestador();
+        for (i = 0; i < lista.size(); i++) {
+            System.out.println("Nome: " + listaP.get(i).getNome());
+        }
+        
+        // salva o arquivo
+        arqP.save(objP);
+
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
