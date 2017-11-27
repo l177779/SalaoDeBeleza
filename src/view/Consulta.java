@@ -111,6 +111,12 @@ public class Consulta extends javax.swing.JFrame {
             }
         });
         jScrollPane1.setViewportView(jTable1);
+        if (jTable1.getColumnModel().getColumnCount() > 0) {
+            jTable1.getColumnModel().getColumn(0).setHeaderValue("Nome");
+            jTable1.getColumnModel().getColumn(1).setHeaderValue("CPF");
+            jTable1.getColumnModel().getColumn(2).setHeaderValue("E-mail");
+            jTable1.getColumnModel().getColumn(3).setHeaderValue("Telefone");
+        }
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -228,7 +234,7 @@ public class Consulta extends javax.swing.JFrame {
                     lista = obj.getListaCliente();
 
                     DefaultTableModel modelo = new DefaultTableModel(null,
-                            new String[]{"Nome", "CPF", "Telefone", "E-mail"});
+                            new String[]{"Nome", "CPF", "E-mail", "Telefone"});
 
                     for (int i = 0; i < lista.size(); i++) {                                               
                         
