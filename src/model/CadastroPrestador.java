@@ -44,11 +44,11 @@ public class CadastroPrestador implements Serializable{
     public List<Prestador> getListaPrestador() {
         int i = 0;
         List<Prestador> lista = new ArrayList<>();
-        
+      
         for (i = 0; i < prestadores.size(); i++){
-            String str[] = new String[8];
-            str = prestadores.get(i);
-            lista.add(new Prestador(str[1], str[2], str[3], str[4].charAt(0), str[5], Double.parseDouble(str[7])));
+            String str[] = new String[7];
+            str = prestadores.get(i);            
+            lista.add(new Prestador(str[1], str[2], str[3], str[4].charAt(0), str[5], Double.parseDouble(str[6])));
             
         }
         return lista;
@@ -66,11 +66,9 @@ public class CadastroPrestador implements Serializable{
         str[2] = prestador.getEmail();
         str[3] = prestador.getTelefone();
         str[4] = Character.toString(prestador.getSexo());
-        str[5] = prestador.getDataNascimento();
+        str[5] = prestador.getDataNascimento();        
         str[6] = Double.toString(prestador.getComissao());
         
         prestadores.add(str);
-    }
-    
-    
+    }   
 }
