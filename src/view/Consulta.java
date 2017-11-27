@@ -214,11 +214,6 @@ public class Consulta extends javax.swing.JFrame {
             erro = "- É necessário selecionar o tipo de consulta: Cliente ou Prestador.\n";
         }
         
-        //verifica se o nome do cliente/prestador foi informado
-        if(txtNome.getText().equals("")){
-            erro += "- É necessário informar o nome a ser pesquisado.";            
-        }
-        
         //se não teve erro
         if(erro.equals("")){
             if(rdCliente.isSelected()){
@@ -237,8 +232,14 @@ public class Consulta extends javax.swing.JFrame {
                             new String[]{"Nome", "CPF", "E-mail", "Telefone"});
 
                     for (int i = 0; i < lista.size(); i++) {                                               
-                        
-                        if(txtNome.getText().equals(lista.get(i).getNome())){
+                        if(txtNome.getText().equals("")){
+                            String dados[] = new String[5];
+                            dados[0] = lista.get(i).getNome();
+                            dados[1] = lista.get(i).getCpf();
+                            dados[2] = lista.get(i).getEmail();
+                            dados[3] = lista.get(i).getTelefone();
+                            modelo.addRow(dados);
+                        } else if(txtNome.getText().equals(lista.get(i).getNome())){
                             String dados[] = new String[5];
                             dados[0] = lista.get(i).getNome();
                             dados[1] = lista.get(i).getCpf();
@@ -276,8 +277,14 @@ public class Consulta extends javax.swing.JFrame {
                             new String[]{"Nome", "E-mail", "Telefone", "Comissão"});
 
                     for (int i = 0; i < listaP.size(); i++) {
-                        
-                        if(txtNome.getText().equals(listaP.get(i).getNome())){
+                        if(txtNome.getText().equals("")){
+                            String dados[] = new String[5];
+                            dados[0] = listaP.get(i).getNome();
+                            dados[1] = listaP.get(i).getEmail();
+                            dados[2] = listaP.get(i).getTelefone();
+                            dados[3] = Double.toString(listaP.get(i).getComissao());
+                            modelo.addRow(dados);
+                        } else if(txtNome.getText().equals(listaP.get(i).getNome())){
                             String dados[] = new String[5];
                             dados[0] = listaP.get(i).getNome();
                             dados[1] = listaP.get(i).getEmail();
