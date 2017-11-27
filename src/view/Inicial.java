@@ -10,6 +10,7 @@ import application.Prestador;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import javax.swing.JOptionPane;
 import model.ArquivoCliente;
 import model.ArquivoPrestador;
 import model.CadastroCliente;
@@ -164,6 +165,7 @@ public class Inicial extends javax.swing.JFrame {
 
     private void btnAgendamentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAgendamentoMouseClicked
         // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "Esta funcionalidade está em desenvolvimento, em breve teremos novidades!");
         /*AgendarHorario ah = new AgendarHorario();
         ah.setVisible(true);*/
     }//GEN-LAST:event_btnAgendamentoMouseClicked

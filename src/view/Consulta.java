@@ -37,7 +37,7 @@ public class Consulta extends javax.swing.JFrame {
         rdPrestador = new javax.swing.JRadioButton();
         btnConsultar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         lblConsulta.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
         lblConsulta.setText("Consulta");
@@ -68,6 +68,11 @@ public class Consulta extends javax.swing.JFrame {
         rdPrestador.setText("Prestador");
 
         btnConsultar.setText("Consultar");
+        btnConsultar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnConsultarMouseClicked(evt);
+            }
+        });
         btnConsultar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnConsultarActionPerformed(evt);
@@ -150,6 +155,10 @@ public class Consulta extends javax.swing.JFrame {
     private void btnConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConsultarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnConsultarActionPerformed
+
+    private void btnConsultarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnConsultarMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnConsultarMouseClicked
 
     /**
      * @param args the command line arguments

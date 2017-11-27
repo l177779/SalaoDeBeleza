@@ -52,7 +52,7 @@ public class Cadastro extends javax.swing.JFrame {
         btnVoltar = new javax.swing.JButton();
         dtNasc = new javax.swing.JFormattedTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);
@@ -340,8 +340,9 @@ public class Cadastro extends javax.swing.JFrame {
         String cpf = txtCpf.getText();
         String email = txtEmail.getText();
         String fone = txtTelefone.getText();
-        char sexoPessoa = rdFeminino.isEnabled()?'F':'M';
+        char sexoPessoa = rdFeminino.isEnabled() ? 'F':'M';
         String nasc = dtNasc.getText();
+        
         if (rdCliente.isEnabled()){
             Cliente cli = new Cliente(nome, cpf, email, fone, sexoPessoa, nasc);
         } else {
