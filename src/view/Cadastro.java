@@ -350,65 +350,93 @@ public class Cadastro extends javax.swing.JFrame {
         String cpf = txtCpf.getText();
         String email = txtEmail.getText();
         String fone = txtTelefone.getText();
-        char sexoPessoa = rdFeminino.isSelected()? 'F':'M';
+        char sexoPessoa = rdFeminino.isSelected()  ? 'F' : 'M';
         String nasc = dtNasc.getText();
 
+        String erro = "";
+        
+        if(nome.equals("")){
+            erro += "- É obrigatório informar o nome.\n";
+        }
+        
+        if(email.equals("")){
+            erro += "- É obrigatório informar o e-mail.\n";
+        }
+        
+        if(fone.equals("")){
+            erro += "- É obrigatório informar o telefone.\n";
+        }                
+        
+        if(nasc.equals("")){
+            erro += "- É obrigatório informar a data de nascimento.\n";
+        }
+        
         if (rdCliente.isSelected()){
 
-            // cria objetos de arquivo
-            ArquivoCliente arq = new ArquivoCliente();
-            CadastroCliente obj = arq.load();
+            if(cpf.equals("")){
+                erro += "- É obrigatório informar o cpf.\n";
+            }
+            
+            if(erro.equals("")){                            
+                try {
+                    // cria objetos de arquivo
+                    ArquivoCliente arq = new ArquivoCliente();
+                    CadastroCliente obj = arq.load();
 
-            //Lista de Prestadores
-            List<Cliente> lista = new ArrayList<>();
-            lista = obj.getListaCliente();
+                    // Exemplo de insercao de Cliente
+                    Cliente c = new Cliente(nome, cpf, email, fone, sexoPessoa, nasc);
 
-            // Exemplo de insercao de Cliente
-            Cliente c = new Cliente(nome, cpf, email, fone, sexoPessoa, nasc);
-            
-            try {
-                obj.insereCliente(c);
+                    obj.insereCliente(c);
 
-                // Salva arquivo
-                arq.save(obj);
-                
-                JOptionPane.showMessageDialog(null, "Cliente cadastrado com sucesso!", "Mensagem", JOptionPane.INFORMATION_MESSAGE);
-                clearForm();
-            
-            }catch(Exception e){
-                Logger LOGGER = Logger.getLogger(Programa.class.getName());
-                LOGGER.log(Level.SEVERE, "cadastra cliente", e);
-                JOptionPane.showMessageDialog(null, "Houve um erro ao cadastrar o cliente, tente novamente.", "Mensagem", JOptionPane.ERROR_MESSAGE);
-            }                        
-            
-            
+                    // Salva arquivo
+                    arq.save(obj);
+
+                    JOptionPane.showMessageDialog(null, "Cliente cadastrado com sucesso!", "Mensagem", JOptionPane.INFORMATION_MESSAGE);
+                    clearForm();
+
+                }catch(Exception e){
+                    Logger LOGGER = Logger.getLogger(Programa.class.getName());
+                    LOGGER.log(Level.SEVERE, "cadastra cliente", e);
+                    JOptionPane.showMessageDialog(null, "Houve um erro ao cadastrar o cliente, tente novamente.", "Mensagem", JOptionPane.ERROR_MESSAGE);
+                }                        
+            }
+
         } else {
-            double comissao = Double.parseDouble(cpf);
             
-            // cria objetos de arquivo
-            ArquivoPrestador arqP = new ArquivoPrestador();
-            CadastroPrestador objP = arqP.load();
-
-            // Lista de Prestadores
-            List<Prestador> listaP = new ArrayList<>();
-            listaP = objP.getListaPrestador();
-
-            Prestador p = new Prestador(nome, email, fone, sexoPessoa, nasc, comissao);
-
-            try {
-                objP.inserePrestador(p);
-
-                // Salva arquivo
-                arqP.save(objP);
-                
-                JOptionPane.showMessageDialog(null, "Prestador cadastrado com sucesso!", "Mensagem", JOptionPane.INFORMATION_MESSAGE);
-                clearForm();
-                
+            double comissao = 0;
+            
+            try{
+                comissao = Double.parseDouble(cpf);
             }catch(Exception e){
-                Logger LOGGER = Logger.getLogger(Programa.class.getName());
-                LOGGER.log(Level.SEVERE, "cadastra prestador", e);
-                JOptionPane.showMessageDialog(null, "Houve um erro ao cadastrar o prestador, tente novamente.", "Mensagem", JOptionPane.ERROR_MESSAGE);
-            }                        
+                erro += "- É obrigatório informar o valor da comissão.\n";
+            }            
+            
+            if(erro.equals("")){
+                try {
+                    // cria objetos de arquivo
+                    ArquivoPrestador arqP = new ArquivoPrestador();
+                    CadastroPrestador objP = arqP.load();                              
+
+                    Prestador p = new Prestador(nome, email, fone, sexoPessoa, nasc, comissao);
+
+                    objP.inserePrestador(p);
+
+                    // Salva arquivo
+                    arqP.save(objP);
+
+                    JOptionPane.showMessageDialog(null, "Prestador cadastrado com sucesso!", "Mensagem", JOptionPane.INFORMATION_MESSAGE);
+                    clearForm();
+
+                }catch(Exception e){
+                    Logger LOGGER = Logger.getLogger(Programa.class.getName());
+                    LOGGER.log(Level.SEVERE, "cadastra prestador", e);
+                    JOptionPane.showMessageDialog(null, "Houve um erro ao cadastrar o prestador, tente novamente.", "Mensagem", JOptionPane.ERROR_MESSAGE);
+                }
+            }
+        }
+        
+        if(!erro.equals("")){
+            JOptionPane.showMessageDialog(null, erro, "Aviso", JOptionPane.WARNING_MESSAGE);
         }
     }//GEN-LAST:event_btnCadastrarMouseClicked
 
@@ -449,11 +477,11 @@ public class Cadastro extends javax.swing.JFrame {
 
     public void clearForm(){
         txtNome.setText("");
-        txtCpf.setText("");
         txtEmail.setText("");
         txtTelefone.setText("");
-        rdFeminino.setSelected(false);
+        rdFeminino.setSelected(true);
         dtNasc.setText("");
+        txtCpf.setText("");
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
