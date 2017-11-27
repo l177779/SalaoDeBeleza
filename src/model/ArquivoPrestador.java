@@ -5,8 +5,6 @@
  */
 package model;
 
-import application.Prestador;
-import controller.Programa;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -15,14 +13,11 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import model.CadastroPrestador;
+import view.Inicial;
 
 /**
  * Esta classe provê acesso aos dados persistentes com os dados de Prestador. Se arquivo
@@ -30,7 +25,7 @@ import model.CadastroPrestador;
  *
  */
 public class ArquivoPrestador {
-    Logger LOGGER = Logger.getLogger(Programa.class.getName());
+    Logger LOGGER = Logger.getLogger(Inicial.class.getName());
     private static final String CSV_FILENAME = "Prestador.csv";
     private static final String SERIAL_FILENAME = "PRESTADOR.dat";
     private final Path arquivoCsv;

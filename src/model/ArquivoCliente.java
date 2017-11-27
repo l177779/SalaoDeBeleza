@@ -5,9 +5,6 @@
  */
 package model;
 
-
-import application.Cliente;
-import controller.Programa;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -20,6 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import view.Inicial;
 //import model.CadastroCliente;
 
 /**
@@ -34,7 +32,7 @@ import java.util.logging.Logger;
  *
  */
 public class ArquivoCliente {
-    Logger LOGGER = Logger.getLogger(Programa.class.getName());
+    Logger LOGGER = Logger.getLogger(Inicial.class.getName());
     private static final String CSV_FILENAME = "Cliente.csv";
     private static final String SERIAL_FILENAME = "CLIENTE.dat";
     private final Path arquivoCsv;

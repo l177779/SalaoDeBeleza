@@ -7,9 +7,6 @@ package view;
 
 import application.Cliente;
 import application.Prestador;
-import controller.Programa;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -395,7 +392,7 @@ public class Cadastro extends javax.swing.JFrame {
                     clearForm();
 
                 }catch(Exception e){
-                    Logger LOGGER = Logger.getLogger(Programa.class.getName());
+                    Logger LOGGER = Logger.getLogger(Inicial.class.getName());
                     LOGGER.log(Level.SEVERE, "cadastra cliente", e);
                     JOptionPane.showMessageDialog(null, "Houve um erro ao cadastrar o cliente, tente novamente.", "Mensagem", JOptionPane.ERROR_MESSAGE);
                 }                        
@@ -428,7 +425,7 @@ public class Cadastro extends javax.swing.JFrame {
                     clearForm();
 
                 }catch(Exception e){
-                    Logger LOGGER = Logger.getLogger(Programa.class.getName());
+                    Logger LOGGER = Logger.getLogger(Inicial.class.getName());
                     LOGGER.log(Level.SEVERE, "cadastra prestador", e);
                     JOptionPane.showMessageDialog(null, "Houve um erro ao cadastrar o prestador, tente novamente.", "Mensagem", JOptionPane.ERROR_MESSAGE);
                 }
