@@ -237,10 +237,10 @@ public class Consulta extends javax.swing.JFrame {
                         
                         if(txtNome.getText().equals(lista.get(i).getNome())){
                             String dados[] = new String[5];
-                            dados[1] = lista.get(i).getNome();
-                            dados[2] = lista.get(i).getCpf();
-                            dados[3] = lista.get(i).getEmail();
-                            dados[4] = lista.get(i).getTelefone();
+                            dados[0] = lista.get(i).getNome();
+                            dados[1] = lista.get(i).getCpf();
+                            dados[2] = lista.get(i).getEmail();
+                            dados[3] = lista.get(i).getTelefone();
                             modelo.addRow(dados);
                         }
                     }
