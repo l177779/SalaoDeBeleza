@@ -7,13 +7,10 @@ package view;
 
 import application.Cliente;
 import application.Prestador;
-import controller.Programa;
-import java.awt.HeadlessException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javafx.scene.control.Alert;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import model.ArquivoCliente;
@@ -237,10 +234,10 @@ public class Consulta extends javax.swing.JFrame {
                         
                         if(txtNome.getText().equals(lista.get(i).getNome())){
                             String dados[] = new String[5];
-                            dados[1] = lista.get(i).getNome();
-                            dados[2] = lista.get(i).getCpf();
-                            dados[3] = lista.get(i).getEmail();
-                            dados[4] = lista.get(i).getTelefone();
+                            dados[0] = lista.get(i).getNome();
+                            dados[1] = lista.get(i).getCpf();
+                            dados[2] = lista.get(i).getEmail();
+                            dados[3] = lista.get(i).getTelefone();
                             modelo.addRow(dados);
                         }
                     }
@@ -253,7 +250,7 @@ public class Consulta extends javax.swing.JFrame {
                     }
                     
                 } catch (Exception e) {
-                    Logger LOGGER = Logger.getLogger(Programa.class.getName());
+                    Logger LOGGER = Logger.getLogger(Inicial.class.getName());
                     LOGGER.log(Level.SEVERE, "busca cliente", e);
                     JOptionPane.showMessageDialog(null, "Houve um erro ao realizar a busca, tente novamente.", "Erro", JOptionPane.ERROR_MESSAGE);
                 }
@@ -292,7 +289,7 @@ public class Consulta extends javax.swing.JFrame {
                     }
                     
                 } catch (Exception e) {
-                    Logger LOGGER = Logger.getLogger(Programa.class.getName());
+                    Logger LOGGER = Logger.getLogger(Inicial.class.getName());
                     LOGGER.log(Level.SEVERE, "busca prestador", e);
                     JOptionPane.showMessageDialog(null, "Houve um erro ao realizar a busca, tente novamente.", "Erro", JOptionPane.ERROR_MESSAGE);
                 }

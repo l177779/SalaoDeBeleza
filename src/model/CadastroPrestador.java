@@ -67,8 +67,7 @@ public class CadastroPrestador implements Serializable{
         str[3] = prestador.getTelefone();
         str[4] = Character.toString(prestador.getSexo());
         str[5] = prestador.getDataNascimento();
-        str[6] = Boolean.toString(prestador.isAtivo());
-        str[7] = Double.toString(prestador.getComissao());
+        str[6] = Double.toString(prestador.getComissao());
         
         prestadores.add(str);
     }
