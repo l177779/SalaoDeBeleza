@@ -340,10 +340,10 @@ public class Cadastro extends javax.swing.JFrame {
         String cpf = txtCpf.getText();
         String email = txtEmail.getText();
         String fone = txtTelefone.getText();
-        char sexoPessoa = rdFeminino.isEnabled() ? 'F':'M';
+        char sexoPessoa = rdFeminino.isSelected()? 'F':'M';
         String nasc = dtNasc.getText();
         
-        if (rdCliente.isEnabled()){
+        if (rdCliente.isSelected()){
             Cliente cli = new Cliente(nome, cpf, email, fone, sexoPessoa, nasc);
         } else {
             double comissao = Double.parseDouble(cpf);
