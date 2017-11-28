@@ -72,6 +72,7 @@ public class Consulta extends javax.swing.JFrame {
         });
 
         tipoPessoa.add(rdCliente);
+        rdCliente.setSelected(true);
         rdCliente.setText("Cliente");
         rdCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
